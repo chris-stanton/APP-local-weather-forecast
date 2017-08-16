@@ -26,7 +26,7 @@
 
 ---
 
-#### App can be viewed at:
+#### App can be viewed at: https://waetherapp.herokuapp.com/
 
 ---
 

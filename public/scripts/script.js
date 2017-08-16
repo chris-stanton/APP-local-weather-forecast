@@ -7,7 +7,9 @@ $(document).ready(function() {
     navigator.geolocation.getCurrentPosition(function(position) {
       lat = position.coords.latitude;
       long = position.coords.longitude;
-      var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
+      var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + '44.7219383' + ',' + '-93.2062399';
+
+      console.log('lat: ', lat, 'long: ', long);
 
       $.ajax({
         type: "GET",
