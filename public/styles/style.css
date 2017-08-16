@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
+h1 {
+  padding: 50px;
+}
+
+.jumbotron {
+  margin-top: 400px;
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+}
+
+.location {
+  padding-bottom: 25px;
+}
+
+.info, .weather, .wind {
+  padding: 20px 20px 10px;
+}
+
+button {
+  margin: 20px;
+}
+
+.icon img {
+  max-width: 100%;
+  width: 100%;
+}
