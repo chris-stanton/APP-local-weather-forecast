@@ -8,31 +8,29 @@ $(document).ready(function() {
       lat = position.coords.latitude;
       long = position.coords.longitude;
       var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
-      console.log(url);
 
       $.ajax({
         type: "GET",
         url: url,
         dataType: "jsonp",
         success: function(response) {
-          console.log(response);
+          console.log('ajax response: ', response);
           $('.location').html(response.timezone);
-          //check postman to see if these are correctly referenced
-          $('.humidity').html(((Math.round(response.currently.humidity)) * 10) + '%');
-          $('.windspeed').html((response.currently.windSpeed) + ' mph');
-          $('.temp').html(Math.round(response.currently.temperature) + ' °F');
-          $('.current-summary').html(response.currently.summary)
-          console.log(response.currently);
+          $('.current-summary').html(response.currently.summary);
+          $('.humidity').html('Humidity: ' + ((Math.round(response.currently.humidity)) * 10) + '%');
+          $('.windspeed').html('WindSpeed: ' + (response.currently.windSpeed) + ' mph');
+          $('.temp').html('Temperature: ' + Math.round(response.currently.temperature) + ' °F');
+
 
           if (response.currently.icon === "clear-day") {
-            $('.icon').html('<img src="https://png.icons8.com/clouds/Dusk_Wired/64">');
+            $('.icon').html('<img src="https://png.icons8.com/clouds/Dusk_Wired/64">');//
             $('body').css('background-image', "url(http://crevisio.com/images/posts/96/yjf9TgZEw/Crevisio-96-yjf9TgZEw.jpg)");
           } else if (response.currently.icon === "clear-night") {
             $('.icon').html('<img src="https://image.flaticon.com/icons/svg/17/17279.svg">');
             $('body').css('background-image', "url(http://clear-night.com/img/clear-night-placeholder.jpg)");
             $('body').css('color', "white");
           } else if (response.currently.icon === "rain") {
-            $('.icon').html('<img src="https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/cloud_rain.png">');
+            $('.icon').html('<img src="https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/cloud_rain.png">');//
             $('body').css('background-image', "url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
             $('body').css('color', "white");
           } else if (response.currently.icon === "snow") {
