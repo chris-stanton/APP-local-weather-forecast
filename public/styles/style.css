@@ -35,7 +35,16 @@ body {
 }
 
 .data-container {
+  margin-bottom: 40px;
+}
 
+.data-container h4 {
+  font-size: 55px;
+  margin: 40px 0px 40px 0px;
+}
+
+.data-container h5 {
+  font-size: 30px;
 }
 
 .data-outlook {
@@ -46,7 +55,7 @@ body {
 .outlook-container {
   border: 1px solid #ffffff;
   border-radius: 5px;
-  margin: 3px;
+  margin: 5px;
   padding: 4px;
 }
 
