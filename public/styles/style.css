@@ -15,9 +15,7 @@ body {
 }
 
 /*//////////////////////////////   MAIN   ///*/
-.container {
 
-}
  .location-container {
   display: flex;
   flex-direction: row;
@@ -25,9 +23,9 @@ body {
  }
 
  .location-container img {
-  height: 100px;
-  margin-top: -19px;
-  margin-right: -20px;
+  height: 75px;
+  /*margin-top: -19px;*/
+  /*margin-right: -20px;*/
 }
 
 .location-container p {

@@ -60,36 +60,36 @@ $(document).ready(function() {
 
             // setting weather icons and background images to current weather conditions
             if (response.currently.icon === "clear-day") {
-              $('.icon').html('<img src="https://png.icons8.com/clouds/Dusk_Wired/64">');//
+              $('.icon').html('<img src="../public/assets/images/icons/clear-day.png">');//
               $('body').css('background-image', "url(http://crevisio.com/images/posts/96/yjf9TgZEw/Crevisio-96-yjf9TgZEw.jpg)");
             } else if (response.currently.icon === "clear-night") {
-              $('.icon').html('<img src="https://image.flaticon.com/icons/svg/17/17279.svg">');
+              $('.icon').html('<img src="../public/assets/images/icons/clear-night.png">');
               $('body').css('background-image', "url(http://clear-night.com/img/clear-night-placeholder.jpg)");
               $('body').css('color', "white");
             } else if (response.currently.icon === "rain") {
-              $('.icon').html('<img src="https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/cloud_rain.png">');//
+              $('.icon').html('<img src="../public/assets/images/icons/rain.png">');//
               $('body').css('background-image', "url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
               $('body').css('color', "white");
             } else if (response.currently.icon === "snow") {
-              $('.icon').html('<img src="https://cdn2.iconfinder.com/data/icons/lil-weather/161/snowflake-512.png">');
+              $('.icon').html('<img src="../public/assets/images/icons/snow.png">');
               $('body').css('background-image', "url(https://vignette4.wikia.nocookie.net/phobia/images/a/aa/Snow.jpg/revision/latest?cb=20161109045734)");
             } else if (response.currently.icon === "sleet") {
-              $('.icon').html('<img src="http://icons.iconarchive.com/icons/icons8/android/256/Weather-Sleet-icon.png">');
+              $('.icon').html('<img src="../public/assets/images/icons/sleet.png">');
               $('body').css('background-image', "url(http://www.abccolumbia.com/wp-content/uploads/2016/01/Image4.jpg)");
             } else if (response.currently.icon === "wind") {
-              $('.icon').html('<img src="https://cdn1.iconfinder.com/data/icons/weather-18/512/wind_storm-512.png">');
+              $('.icon').html('<img src="../public/assets/images/icons/wind.png">');
               $('body').css('background-image', "url(https://media.mnn.com/assets/images/2016/05/01-windydog-carloscherer.jpg.838x0_q80.jpg)");
             } else if (response.currently.icon === "fog") {
-              $('.icon').html('<img src="https://cdn4.iconfinder.com/data/icons/heavy-weather/100/Weather_Icons_09_fog-512.png">');
+              $('.icon').html('<img src="../public/assets/images/icons/fog.png">');
               $('body').css('background-image', "url(https://www.howitworksdaily.com/wp-content/uploads/2014/08/fog-06.jpg)");
             } else if (response.currently.icon === "cloudy") {
-              $('.icon').html('<img src="http://www.endlessicons.com/wp-content/uploads/2012/12/cloudy-icon-614x460.png">');
+              $('.icon').html('<img src="../public/assets/images/icons/cloudy.png">');
               $('body').css('background-image', "url(http://www.quotemaster.org/images/d9/d982a47690bc30527138826a3b13206e.jpg)");
             } else if (response.currently.icon === "partly-cloudy-day") {
-              $('.icon').html('<img src="http://www.endlessicons.com/wp-content/uploads/2012/12/mostly-cloudy-icon-614x460.png">');
+              $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png">');
               $('body').css('background-image', "url(https://ak9.picdn.net/shutterstock/videos/9503747/thumb/1.jpg)");
             } else if (response.currently.icon === "partly-cloudy-night") {
-              $('.icon').html('<img src="http://icons.veryicon.com/ico/System/Icons8%20Metro%20Style/Weather%20Partly%20cloudy%20night.ico">');
+              $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png">');
               $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
               $('body').css('color', "white");
             }
