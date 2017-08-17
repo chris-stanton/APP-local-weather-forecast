@@ -7,7 +7,7 @@ $(document).ready(function() {
     var lat = 0;
 
     // hiding all elements and showing loader
-    $(".flex-container").hide();
+    $(".container").hide();
     $(".data-outlook").hide();
     $(".loader-container").show();
     $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
             // hiding loader and showing date
             $(".loader-container").hide();
-            $(".flex-container").show();
+            $(".container").show();
             $(".data-outlook").show();
             // placing data on DOM
             $('.location').html(response.timezone);
