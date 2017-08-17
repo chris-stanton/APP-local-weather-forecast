@@ -6,6 +6,8 @@ body {
   background-position: center bottom;
   background-attachment: fixed;
   background-size: cover;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px #000000;
   margin: 0px;
   padding: 0px;
   height: 100vh;
@@ -14,26 +16,35 @@ body {
 
 /*//////////////////////////////   MAIN   ///*/
 .container {
-  text-align: center;
+
 }
  .location-container {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
  }
 
-.icon img {
-  height: 300px;
+ .location-container img {
+  height: 100px;
+  margin-top: -19px;
+  margin-right: -20px;
+}
+
+.location-container p {
+  margin-top: 20px;
 }
 
 .data-container {
-  color: #ffffff;
+
 }
 
 .data-outlook {
-
+  display: flex;
+  flex-direction: row;
 }
 
 .outlook-container {
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   margin: 3px;
   padding: 4px;

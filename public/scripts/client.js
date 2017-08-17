@@ -31,7 +31,7 @@ $(document).ready(function() {
             console.log('Google API response: ', response);
               $('.city').html(response.results[0].address_components[2].long_name);
               $('.county').html(response.results[0].address_components[3].long_name);
-              $('.state').html(response.results[0].address_components[4].long_name);
+              $('.state').html(response.results[0].address_components[4].long_name + ' ,');
               $('.zipcode').html(response.results[0].address_components[6].long_name);
           } // end of success
       }); // end of ajax
