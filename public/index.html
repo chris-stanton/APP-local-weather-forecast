@@ -11,11 +11,12 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="../public/styles/style.css">
-        <title> Weather App </title>
+        <title> Current Weather App </title>
 </head>
 
 <body>
   <section class="loader-container">
+    <h1> Current Location Weather Forecast </h1>
     <div class="loader">Loading...</div>
   </section>
 
@@ -29,10 +30,33 @@
         </section>
 
         <section class="data-container">
+          <h4 class="currenttime"></h4>
           <!-- <h1 class="current-summary"></h1> -->
           <h4 class="humidity"></h4>
           <h4 class="windspeed"></h4>
           <h4 class="temp"></h4>
+        </section>
+
+        <section class="data-outlook">
+          <div class="outlook-0 outlook-container">
+            <div class="outlook-0-icon">
+              <img src="./"/>
+            </div>
+            <div class="outlook-data-container">
+              <h5 class="outlook-0-temphigh"></h5>
+              <h5 class="outlook-0-templow"></h5>
+              <p class="outlook-0-sunrise"></p>
+              <p class="outlook-0-sunset"></p>
+              <p class="outlook-0-summary"><p>
+            </div>
+          </div>
+          <div class="outlook-1 outlook-container"></div>
+          <div class="outlook-2 outlook-container"></div>
+          <div class="outlook-3 outlook-container"></div>
+          <div class="outlook-4 outlook-container"></div>
+          <div class="outlook-5 outlook-container"></div>
+          <div class="outlook-6 outlook-container"></div>
+
         </section>
   </section>
 </body>

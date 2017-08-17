@@ -1,4 +1,3 @@
-var weatherObj = {};
 
 $(document).ready(function() {
   console.log("client.js running...");
@@ -6,6 +5,7 @@ $(document).ready(function() {
   var long = 0;
   var lat = 0;
     $(".flex-container").hide();
+    $(".data-outlook").hide();
     $(".loader-container").show();
     $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
 
@@ -17,7 +17,7 @@ $(document).ready(function() {
       long = position.coords.longitude;
       console.log('lat:', lat, 'long:', long);
 
-      // API key url by lat and lon
+      // API url query key by current lat and lon
       var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
 
       // https request to API with location details
@@ -31,9 +31,14 @@ $(document).ready(function() {
             // hiding loader and showing date
             $(".loader-container").hide();
             $(".flex-container").show();
+            $(".data-outlook").show();
 
-            // displaying data on DOM
+            // displaying current weather data on DOM
             $('.location').html(response.timezone);
+            // converts numeric date value to string
+            var date = new Date(response.currently.time);
+            var date = date.toDateString();
+            $('.currenttime').html('Current Time: ' + date);
             $('.current-summary').html(response.currently.summary);
             $('.humidity').html('Humidity: ' + ((Math.round(response.currently.humidity)) * 10) + '%');
             $('.windspeed').html('WindSpeed: ' + (response.currently.windSpeed) + ' mph');
@@ -74,6 +79,96 @@ $(document).ready(function() {
               $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
               $('body').css('color', "white");
             }
+
+            // setting default font color to white on init
+            $('.data-outlook').css('color', "white");
+
+            // outlook details[0]
+            $('.outlook-0-summary').html('Summary: ' + response.daily.data[0].summary);
+            $('.outlook-0-temphigh').html('High: ' + response.daily.data[0].temperatureMax  + ' °F');
+            $('.outlook-0-templow').html('Low: ' + response.daily.data[0].temperatureMin  + ' °F');
+            $('.outlook-0-windspeed').html('Wind Speed: ' + response.daily.data[0].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[0].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-0-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[0].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-0-sunset').html('Sun Set: ' + sunsetTime);
+
+            // outlook details[1]
+            $('.outlook-1-summary').html('Summary: ' + response.daily.data[1].summary);
+            $('.outlook-1-temphigh').html('High: ' + response.daily.data[1].temperatureMax  + ' °F');
+            $('.outlook-1-templow').html('Low: ' + response.daily.data[1].temperatureMin  + ' °F');
+            $('.outlook-1-windspeed').html('Wind Speed: ' + response.daily.data[1].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[1].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-1-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[1].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-1-sunset').html('Sun Set: ' + sunsetTime);
+
+            // outlook details[2]
+            $('.outlook-2-summary').html('Summary: ' + response.daily.data[2].summary);
+            $('.outlook-2-temphigh').html('High: ' + response.daily.data[2].temperatureMax  + ' °F');
+            $('.outlook-2-templow').html('Low: ' + response.daily.data[2].temperatureMin  + ' °F');
+            $('.outlook-2-windspeed').html('Wind Speed: ' + response.daily.data[2].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[2].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-2-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[2].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-2-sunset').html('Sun Set: ' + sunsetTime);
+
+            // outlook details[3]
+            $('.outlook-3-summary').html('Summary: ' + response.daily.data[3].summary);
+            $('.outlook-3-temphigh').html('High: ' + response.daily.data[3].temperatureMax  + ' °F');
+            $('.outlook-3-templow').html('Low: ' + response.daily.data[3].temperatureMin  + ' °F');
+            $('.outlook-3-windspeed').html('Wind Speed: ' + response.daily.data[3].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[3].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-3-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[3].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-3-sunset').html('Sun Set: ' + sunsetTime);
+
+            // outlook details[4]
+            $('.outlook-4-summary').html('Summary: ' + response.daily.data[4].summary);
+            $('.outlook-4-temphigh').html('High: ' + response.daily.data[4].temperatureMax  + ' °F');
+            $('.outlook-4-templow').html('Low: ' + response.daily.data[4].temperatureMin  + ' °F');
+            $('.outlook-4-windspeed').html('Wind Speed: ' + response.daily.data[4].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[4].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-4-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[4].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-4-sunset').html('Sun Set: ' + sunsetTime);
+
+            // outlook details[5]
+            $('.outlook-5-summary').html('Summary: ' + response.daily.data[5].summary);
+            $('.outlook-5-temphigh').html('High: ' + response.daily.data[5].temperatureMax  + ' °F');
+            $('.outlook-5-templow').html('Low: ' + response.daily.data[5].temperatureMin  + ' °F');
+            $('.outlook-5-windspeed').html('Wind Speed: ' + response.daily.data[5].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[5].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-5-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[5].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-5-sunset').html('Sun Set: ' + sunsetTime);
+
+            // outlook details[6]
+            $('.outlook-6-summary').html('Summary: ' + response.daily.data[6].summary);
+            $('.outlook-6-temphigh').html('High: ' + response.daily.data[6].temperatureMax  + ' °F');
+            $('.outlook-6-templow').html('Low: ' + response.daily.data[6].temperatureMin  + ' °F');
+            $('.outlook-6-windspeed').html('Wind Speed: ' + response.daily.data[6].windSpeed  + ' mph');
+            var sunriseTime = new Date(response.daily.data[6].sunriseTime);
+            var sunriseTime = sunriseTime.toTimeString();
+            $('.outlook-6-sunrise').html('Sun Rise: ' + sunriseTime);
+            var sunsetTime = new Date(response.daily.data[6].sunsetTime);
+            var sunsetTime = sunsetTime.toTimeString();
+            $('.outlook-6-sunset').html('Sun Set: ' + sunsetTime);
+
+
+
         } // end success
       }); // end ajax
     }); // end get current position
