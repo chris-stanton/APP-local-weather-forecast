@@ -3,3 +3,4 @@ DS_Store/
 .env/
 .log/
 node_modules
+googleAPI.json
