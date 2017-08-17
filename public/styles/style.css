@@ -43,6 +43,13 @@ body {
   flex-direction: row;
 }
 
+.outlook-container {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 4px;
+}
+
 /*//////////////////////////////   LOADER   ///*/
 .loader-container h1 {
   margin-top: 80px;
