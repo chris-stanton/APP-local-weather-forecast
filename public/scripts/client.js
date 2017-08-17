@@ -1,22 +1,26 @@
 var weatherObj = {};
 
 $(document).ready(function() {
+  console.log("client.js running...");
+  // settig default values on init
   var long = 0;
   var lat = 0;
+    $(".flex-container").hide();
+    $(".loader-container").show();
+    $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
 
-  $(".flex-container").hide();
-  $(".loader-container").show();
-  $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
-
-
+    // checking for geolocation
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
+      // geolocation response
       lat = position.coords.latitude;
       long = position.coords.longitude;
-      var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
-
       console.log('lat:', lat, 'long:', long);
 
+      // API key url by lat and lon
+      var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
+
+      // https request to API with location details
       $.ajax({
         type: "GET",
         url: url,
@@ -24,16 +28,18 @@ $(document).ready(function() {
         success: function(response) {
             console.log('ajax API response: ', response);
 
+            // hiding loader and showing date
             $(".loader-container").hide();
             $(".flex-container").show();
 
+            // displaying data on DOM
             $('.location').html(response.timezone);
             $('.current-summary').html(response.currently.summary);
             $('.humidity').html('Humidity: ' + ((Math.round(response.currently.humidity)) * 10) + '%');
             $('.windspeed').html('WindSpeed: ' + (response.currently.windSpeed) + ' mph');
             $('.temp').html('Temperature: ' + Math.round(response.currently.temperature) + ' °F');
 
-
+            // setting weather icons and background images to current weather conditions
             if (response.currently.icon === "clear-day") {
               $('.icon').html('<img src="https://png.icons8.com/clouds/Dusk_Wired/64">');//
               $('body').css('background-image', "url(http://crevisio.com/images/posts/96/yjf9TgZEw/Crevisio-96-yjf9TgZEw.jpg)");
@@ -68,7 +74,6 @@ $(document).ready(function() {
               $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
               $('body').css('color', "white");
             }
-
         } // end success
       }); // end ajax
     }); // end get current position

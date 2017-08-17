@@ -1,3 +1,5 @@
+
+/*//////////////////////////////   INIT   ///*/
 body {
   text-align: center;
   background-repeat: no-repeat;
@@ -10,14 +12,13 @@ body {
   width: 100%;
 }
 
-
+/*//////////////////////////////   MAIN   ///*/
 .flex-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
 }
-
 
 .icon-container {
 
@@ -37,15 +38,14 @@ body {
   margin: 0% 15% 0% 15%;
 }
 
-
-
+/*//////////////////////////////   LOADER   ///*/
 .loader-container {
   margin-top: 300px;
 }
 
 .loader {
-  color: #6c6c6c;
-  opacity: 0.5;
+  color: #ffebeb;
+  opacity: 0.7;
   font-size: 40px;
   margin: 100px auto;
   width: 1em;
