@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  /*background-image: url('../assets/images/backgrounds/loader.png');*/
   background-repeat: no-repeat;
   background-position: center bottom;
   background-attachment: fixed;
@@ -46,12 +47,13 @@ body {
 
 
 
+.loader-container {
+  margin-top: 300px;
 
-
+}
 
 .loader {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
   font-size: 20px;
   margin: 100px auto;
   width: 1em;

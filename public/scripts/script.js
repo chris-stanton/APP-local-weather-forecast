@@ -3,6 +3,12 @@ var weatherObj = {};
 $(document).ready(function() {
   var long = 0;
   var lat = 0;
+
+  $(".flex-container").hide();
+  $(".loader-container").show();
+  $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
+
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       lat = position.coords.latitude;
@@ -11,22 +17,14 @@ $(document).ready(function() {
 
       console.log('lat:', lat, 'long:', long);
 
-      $(".flex-container").hide();
-      $(".loader").show();
-
       $.ajax({
         type: "GET",
         url: url,
         dataType: "jsonp",
         success: function(response) {
+            console.log('ajax API response: ', response);
 
-          if ('') {
-
-            console.log('null');
-          } else {
-            console.log('active');
-            console.log('ajax response: ', response);
-            $(".loader").hide();
+            $(".loader-container").hide();
             $(".flex-container").show();
 
             $('.location').html(response.timezone);
@@ -70,7 +68,7 @@ $(document).ready(function() {
               $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
               $('body').css('color', "white");
             }
-          }
+
         } // end success
       }); // end ajax
     }); // end get current position
