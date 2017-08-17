@@ -36,9 +36,9 @@ $(document).ready(function() {
             // displaying current weather data on DOM
             $('.location').html(response.timezone);
             // converts numeric date value to string
-            var date = new Date(response.currently.time);
+            var date = new Date(response.currently.time*1000);
             var date = date.toDateString();
-            $('.currenttime').html('Current Time: ' + date);
+            $('.currenttime').html(date);
             $('.current-summary').html(response.currently.summary);
             $('.humidity').html('Humidity: ' + ((Math.round(response.currently.humidity)) * 10) + '%');
             $('.windspeed').html('WindSpeed: ' + (response.currently.windSpeed) + ' mph');
@@ -84,87 +84,80 @@ $(document).ready(function() {
             $('.data-outlook').css('color', "white");
 
             // outlook details[0]
+            $('.outlook-0-date').html(new Date(response.daily.data[0].time*1000).toDateString());
             $('.outlook-0-summary').html('Summary: ' + response.daily.data[0].summary);
             $('.outlook-0-temphigh').html('High: ' + response.daily.data[0].temperatureMax  + ' °F');
             $('.outlook-0-templow').html('Low: ' + response.daily.data[0].temperatureMin  + ' °F');
             $('.outlook-0-windspeed').html('Wind Speed: ' + response.daily.data[0].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[0].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[0].sunriseTime*1000).toTimeString();
             $('.outlook-0-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[0].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[0].sunsetTime*1000).toTimeString();
             $('.outlook-0-sunset').html('Sun Set: ' + sunsetTime);
 
             // outlook details[1]
+            $('.outlook-1-date').html(new Date(response.daily.data[1].time*1000).toDateString());
             $('.outlook-1-summary').html('Summary: ' + response.daily.data[1].summary);
             $('.outlook-1-temphigh').html('High: ' + response.daily.data[1].temperatureMax  + ' °F');
             $('.outlook-1-templow').html('Low: ' + response.daily.data[1].temperatureMin  + ' °F');
             $('.outlook-1-windspeed').html('Wind Speed: ' + response.daily.data[1].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[1].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[1].sunriseTime*1000).toTimeString();
             $('.outlook-1-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[1].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[1].sunsetTime*1000).toTimeString();
             $('.outlook-1-sunset').html('Sun Set: ' + sunsetTime);
 
             // outlook details[2]
+            $('.outlook-2-date').html(new Date(response.daily.data[2].time*1000).toDateString());
             $('.outlook-2-summary').html('Summary: ' + response.daily.data[2].summary);
             $('.outlook-2-temphigh').html('High: ' + response.daily.data[2].temperatureMax  + ' °F');
             $('.outlook-2-templow').html('Low: ' + response.daily.data[2].temperatureMin  + ' °F');
             $('.outlook-2-windspeed').html('Wind Speed: ' + response.daily.data[2].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[2].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[2].sunriseTime*1000).toTimeString();
             $('.outlook-2-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[2].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[2].sunsetTime*1000).toTimeString();
             $('.outlook-2-sunset').html('Sun Set: ' + sunsetTime);
 
             // outlook details[3]
+            $('.outlook-3-date').html(new Date(response.daily.data[3].time*1000).toDateString());
             $('.outlook-3-summary').html('Summary: ' + response.daily.data[3].summary);
             $('.outlook-3-temphigh').html('High: ' + response.daily.data[3].temperatureMax  + ' °F');
             $('.outlook-3-templow').html('Low: ' + response.daily.data[3].temperatureMin  + ' °F');
             $('.outlook-3-windspeed').html('Wind Speed: ' + response.daily.data[3].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[3].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[3].sunriseTime*1000).toTimeString();
             $('.outlook-3-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[3].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[3].sunsetTime*1000).toTimeString();
             $('.outlook-3-sunset').html('Sun Set: ' + sunsetTime);
 
             // outlook details[4]
+            $('.outlook-4-date').html(new Date(response.daily.data[4].time*1000).toDateString());
             $('.outlook-4-summary').html('Summary: ' + response.daily.data[4].summary);
             $('.outlook-4-temphigh').html('High: ' + response.daily.data[4].temperatureMax  + ' °F');
             $('.outlook-4-templow').html('Low: ' + response.daily.data[4].temperatureMin  + ' °F');
             $('.outlook-4-windspeed').html('Wind Speed: ' + response.daily.data[4].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[4].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[4].sunriseTime*1000).toTimeString();
             $('.outlook-4-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[4].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[4].sunsetTime*1000).toTimeString();
             $('.outlook-4-sunset').html('Sun Set: ' + sunsetTime);
 
             // outlook details[5]
+            $('.outlook-5-date').html(new Date(response.daily.data[5].time*1000).toDateString());
             $('.outlook-5-summary').html('Summary: ' + response.daily.data[5].summary);
             $('.outlook-5-temphigh').html('High: ' + response.daily.data[5].temperatureMax  + ' °F');
             $('.outlook-5-templow').html('Low: ' + response.daily.data[5].temperatureMin  + ' °F');
             $('.outlook-5-windspeed').html('Wind Speed: ' + response.daily.data[5].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[5].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[5].sunriseTime*1000).toTimeString();
             $('.outlook-5-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[5].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[5].sunsetTime*1000).toTimeString();
             $('.outlook-5-sunset').html('Sun Set: ' + sunsetTime);
 
             // outlook details[6]
+            $('.outlook-6-date').html(new Date(response.daily.data[6].time*1000).toDateString());
             $('.outlook-6-summary').html('Summary: ' + response.daily.data[6].summary);
             $('.outlook-6-temphigh').html('High: ' + response.daily.data[6].temperatureMax  + ' °F');
             $('.outlook-6-templow').html('Low: ' + response.daily.data[6].temperatureMin  + ' °F');
             $('.outlook-6-windspeed').html('Wind Speed: ' + response.daily.data[6].windSpeed  + ' mph');
-            var sunriseTime = new Date(response.daily.data[6].sunriseTime);
-            var sunriseTime = sunriseTime.toTimeString();
+            var sunriseTime = new Date(response.daily.data[6].sunriseTime*1000).toTimeString();
             $('.outlook-6-sunrise').html('Sun Rise: ' + sunriseTime);
-            var sunsetTime = new Date(response.daily.data[6].sunsetTime);
-            var sunsetTime = sunsetTime.toTimeString();
+            var sunsetTime = new Date(response.daily.data[6].sunsetTime*1000).toTimeString();
             $('.outlook-6-sunset').html('Sun Set: ' + sunsetTime);
 
 
