@@ -35,10 +35,7 @@ $(document).ready(function() {
 
             // displaying current weather data on DOM
             $('.location').html(response.timezone);
-            // converts numeric date value to string
-            var date = new Date(response.currently.time*1000);
-            var date = date.toDateString();
-            $('.currenttime').html(date);
+            $('.currenttime').html(new Date(response.currently.time*1000).toDateString());
             $('.current-summary').html(response.currently.summary);
             $('.humidity').html('Humidity: ' + ((Math.round(response.currently.humidity)) * 10) + '%');
             $('.windspeed').html('WindSpeed: ' + (response.currently.windSpeed) + ' mph');
