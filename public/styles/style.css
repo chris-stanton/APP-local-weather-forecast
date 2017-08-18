@@ -14,6 +14,18 @@ body {
   width: 100%;
 }
 
+.orange {
+  color: #ff7300;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.blue {
+  color: #3e80ff;
+}
+
 /*//////////////////////////////   MAIN   ///*/
 
  .location-container {
