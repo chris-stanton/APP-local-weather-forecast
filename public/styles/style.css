@@ -22,6 +22,8 @@ body {
   justify-content: flex-end;
  }
 
+
+
  .location-container img {
   height: 75px;
   /*margin-top: -19px;*/
@@ -34,15 +36,18 @@ body {
 
 .data-container {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .data-container h4 {
-  font-size: 55px;
-  margin: 40px 0px 40px 0px;
+  font-size: 50px;
+  margin: 40px 0px 0px 0px;
 }
 
 .data-container h5 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .data-outlook {

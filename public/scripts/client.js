@@ -15,6 +15,27 @@ $(document).ready(function() {
     // checking for geolocation
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
+
+
+      var successHandler = function(position) {
+      // alert(position.coords.latitude);
+      // alert(position.coords.longitude);
+      };
+
+      var errorHandler = function (errorObj) {
+      alert(errorObj.code + ": " + errorObj.message);
+
+      alert("something wrong take this lat " );
+      alert("something wrong take this lng ");
+
+      };
+
+      navigator.geolocation.getCurrentPosition(
+      successHandler, errorHandler,
+      {enableHighAccuracy: true, maximumAge: 10000});
+
+
+
       // geolocation response
       lat = position.coords.latitude;
       long = position.coords.longitude;
