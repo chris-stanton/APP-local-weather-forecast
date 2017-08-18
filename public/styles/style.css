@@ -22,28 +22,29 @@ body {
   justify-content: flex-end;
  }
 
-
-
  .location-container img {
-  height: 75px;
-  /*margin-top: -19px;*/
-  /*margin-right: -20px;*/
+  height: 40px;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 
 .location-container p {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .data-container {
-  margin-bottom: 40px;
+  margin: 10px 0px 20px 0px;
+  padding: 15px 0px 15px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .data-container h4 {
   font-size: 50px;
-  margin: 40px 0px 0px 0px;
 }
 
 .data-container h5 {
@@ -60,11 +61,12 @@ body {
   border-radius: 5px;
   margin: 5px;
   padding: 4px;
-  width: 330px;
+  width: 333px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .outlook-icon {
-  height: 30px;
+  height: 35px;
   margin: 4px 0px 4px 0px;
 }
 
@@ -158,8 +160,21 @@ body {
    justify-content: center;
   }
 
+  .data-container {
+    border: none;
+    background-color: transparent;
+  }
+
   .data-outlook {
     flex-direction: column;
+  }
+
+  .outlook-container {
+
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #ffffff;
+    border-radius: 0px;
   }
 
 }
