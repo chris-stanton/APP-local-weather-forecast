@@ -79,8 +79,8 @@ body {
 }
 
 .loader {
-  color: #ffffff;
-  opacity: 0.5;
+  color: #359ab5;
+  /*opacity: 0.5;*/
   font-size: 40px;
   margin: 100px auto;
   width: 1em;

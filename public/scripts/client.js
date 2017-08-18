@@ -12,17 +12,16 @@ $(document).ready(function() {
     $(".loader-container").show();
     $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
 
-    // checking for geolocation
+    // getting current location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
 
-      // geolocation response
+      // geolocation response setting to variable
       lat = position.coords.latitude;
       long = position.coords.longitude;
 
-      // API url query key to get lat long details from google
+      // API query key to get address details bassed from lat/long
       var google =  "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyDp0HzZ2Mydb4qQsMKpMgkIQPxN3x5-gdE";
-      // https request to google for location details
       $.ajax({
         type: "GET",
         url: google,
@@ -37,11 +36,10 @@ $(document).ready(function() {
       }); // end of ajax
 
       // API url query key for current weather details based off of lat and long
-      var url = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
-      // https request to Dark Sky for location weather details
+      var dark_sky = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
       $.ajax({
         type: "GET",
-        url: url,
+        url: dark_sky,
         dataType: "jsonp",
         success: function(response) {
             console.log('Dark Sky API response: ', response);
