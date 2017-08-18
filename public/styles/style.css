@@ -55,6 +55,12 @@ body {
   border-radius: 5px;
   margin: 5px;
   padding: 4px;
+  width: 330px;
+}
+
+.outlook-icon {
+  height: 30px;
+  margin: 4px 0px 4px 0px;
 }
 
 /*//////////////////////////////   LOADER   ///*/
@@ -137,4 +143,14 @@ body {
   87.5% {
     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .data-outlook {
+    flex-direction: column;
+  }
+
 }

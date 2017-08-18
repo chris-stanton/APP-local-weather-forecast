@@ -92,7 +92,9 @@ $(document).ready(function() {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png">');
               $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
               $('body').css('color', "white");
-            }
+            } else {
+              console.log('response.currently.icon fail');
+            };
 
             // setting default font color to white on init
             $('.data-outlook').css('color', "white");
@@ -105,6 +107,29 @@ $(document).ready(function() {
             $('.outlook-0-windspeed').html('Wind Speed: ' + response.daily.data[0].windSpeed  + ' mph');
             $('.outlook-0-sunrise').html('Sun Rise: ' + new Date(response.daily.data[0].sunriseTime*1000).toTimeString());
             $('.outlook-0-sunset').html('Sun Set: ' + new Date(response.daily.data[0].sunsetTime*1000).toTimeString());
+              if (response.daily.data[0].icon === "clear-day") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "clear-night") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "rain") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[0].icon === "snow") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "sleet") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "wind") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "fog") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "cloudy") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "partly-cloudy-day") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[0].icon === "partly-cloudy-night") {
+                $('.outlook-0-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[0].icon failed');
+              };
 
             // outlook details[1]
             $('.outlook-1-date').html(new Date(response.daily.data[1].time*1000).toDateString());
@@ -114,6 +139,29 @@ $(document).ready(function() {
             $('.outlook-1-windspeed').html('Wind Speed: ' + response.daily.data[1].windSpeed  + ' mph');
             $('.outlook-1-sunrise').html('Sun Rise: ' + new Date(response.daily.data[1].sunriseTime*1000).toTimeString());
             $('.outlook-1-sunset').html('Sun Set: ' + new Date(response.daily.data[1].sunsetTime*1000).toTimeString());
+              if (response.daily.data[1].icon === "clear-day") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "clear-night") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "rain") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[1].icon === "snow") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "sleet") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "wind") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "fog") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "cloudy") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "partly-cloudy-day") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[1].icon === "partly-cloudy-night") {
+                $('.outlook-1-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[1].icon failed');
+              };
 
             // outlook details[2]
             $('.outlook-2-date').html(new Date(response.daily.data[2].time*1000).toDateString());
@@ -123,6 +171,29 @@ $(document).ready(function() {
             $('.outlook-2-windspeed').html('Wind Speed: ' + response.daily.data[2].windSpeed  + ' mph');
             $('.outlook-2-sunrise').html('Sun Rise: ' + new Date(response.daily.data[2].sunriseTime*1000).toTimeString());
             $('.outlook-2-sunset').html('Sun Set: ' + new Date(response.daily.data[2].sunsetTime*1000).toTimeString());
+              if (response.daily.data[2].icon === "clear-day") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "clear-night") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "rain") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[2].icon === "snow") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "sleet") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "wind") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "fog") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "cloudy") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "partly-cloudy-day") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[2].icon === "partly-cloudy-night") {
+                $('.outlook-2-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[2].icon failed');
+              };
 
             // outlook details[3]
             $('.outlook-3-date').html(new Date(response.daily.data[3].time*1000).toDateString());
@@ -132,6 +203,29 @@ $(document).ready(function() {
             $('.outlook-3-windspeed').html('Wind Speed: ' + response.daily.data[3].windSpeed  + ' mph');
             $('.outlook-3-sunrise').html('Sun Rise: ' + new Date(response.daily.data[3].sunriseTime*1000).toTimeString());
             $('.outlook-3-sunset').html('Sun Set: ' + new Date(response.daily.data[3].sunsetTime*1000).toTimeString());
+              if (response.daily.data[3].icon === "clear-day") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "clear-night") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "rain") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[3].icon === "snow") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "sleet") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "wind") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "fog") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "cloudy") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "partly-cloudy-day") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[3].icon === "partly-cloudy-night") {
+                $('.outlook-3-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[3].icon failed');
+              };
 
             // outlook details[4]
             $('.outlook-4-date').html(new Date(response.daily.data[4].time*1000).toDateString());
@@ -141,6 +235,29 @@ $(document).ready(function() {
             $('.outlook-4-windspeed').html('Wind Speed: ' + response.daily.data[4].windSpeed  + ' mph');
             $('.outlook-4-sunrise').html('Sun Rise: ' + new Date(response.daily.data[4].sunriseTime*1000).toTimeString());
             $('.outlook-4-sunset').html('Sun Set: ' + new Date(response.daily.data[4].sunsetTime*1000).toTimeString());
+              if (response.daily.data[4].icon === "clear-day") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "clear-night") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "rain") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[4].icon === "snow") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "sleet") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "wind") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "fog") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "cloudy") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "partly-cloudy-day") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[4].icon === "partly-cloudy-night") {
+                $('.outlook-4-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[4].icon failed');
+              };
 
             // outlook details[5]
             $('.outlook-5-date').html(new Date(response.daily.data[5].time*1000).toDateString());
@@ -150,6 +267,29 @@ $(document).ready(function() {
             $('.outlook-5-windspeed').html('Wind Speed: ' + response.daily.data[5].windSpeed  + ' mph');
             $('.outlook-5-sunrise').html('Sun Rise: ' + new Date(response.daily.data[5].sunriseTime*1000).toTimeString());
             $('.outlook-5-sunset').html('Sun Set: ' + new Date(response.daily.data[5].sunsetTime*1000).toTimeString());
+              if (response.daily.data[5].icon === "clear-day") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "clear-night") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "rain") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[5].icon === "snow") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "sleet") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "wind") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "fog") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "cloudy") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "partly-cloudy-day") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[5].icon === "partly-cloudy-night") {
+                $('.outlook-5-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[5].icon failed');
+              };
 
             // outlook details[6]
             $('.outlook-6-date').html(new Date(response.daily.data[6].time*1000).toDateString());
@@ -159,7 +299,29 @@ $(document).ready(function() {
             $('.outlook-6-windspeed').html('Wind Speed: ' + response.daily.data[6].windSpeed  + ' mph');
             $('.outlook-6-sunrise').html('Sun Rise: ' + new Date(response.daily.data[6].sunriseTime*1000).toTimeString());
             $('.outlook-6-sunset').html('Sun Set: ' + new Date(response.daily.data[6].sunsetTime*1000).toTimeString());
-
+              if (response.daily.data[6].icon === "clear-day") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/clear-day.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "clear-night") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/clear-night.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "rain") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/rain.png" class="outlook-icon">');//
+              } else if (response.daily.data[6].icon === "snow") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/snow.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "sleet") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/sleet.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "wind") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/wind.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "fog") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/fog.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "cloudy") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/cloudy.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "partly-cloudy-day") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png" class="outlook-icon">');
+              } else if (response.daily.data[6].icon === "partly-cloudy-night") {
+                $('.outlook-6-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
+              } else {
+                console.log('response.daily.data[4].icon failed');
+              };
 
 
         } // end success
