@@ -98,7 +98,7 @@ $(document).ready(function() {
 
             // outlook details[0]
             $('.outlook-0-date').html(new Date(response.daily.data[0].time*1000).toDateString());
-            $('.outlook-0-summary').html('Summary: ' + response.daily.data[0].summary);
+            $('.outlook-0-summary').html('Summary: <br>' + response.daily.data[0].summary);
             $('.outlook-0-temphigh').html('High: ' + '<span class="red">' + response.daily.data[0].temperatureMax  + ' °F </span>');
             $('.outlook-0-templow').html('Low: ' + '<span class="blue">' + response.daily.data[0].temperatureMin  + ' °F </span>');
             $('.outlook-0-windspeed').html('Wind Speed: ' + response.daily.data[0].windSpeed  + ' mph');
@@ -130,7 +130,7 @@ $(document).ready(function() {
 
             // outlook details[1]
             $('.outlook-1-date').html(new Date(response.daily.data[1].time*1000).toDateString());
-            $('.outlook-1-summary').html('Summary: ' + response.daily.data[1].summary);
+            $('.outlook-1-summary').html('Summary: <br>' + response.daily.data[1].summary);
             $('.outlook-1-temphigh').html('High: ' + '<span class="red">' + response.daily.data[1].temperatureMax  + ' °F </span>');
             $('.outlook-1-templow').html('Low: ' + '<span class="blue">' + response.daily.data[1].temperatureMin  + ' °F </span>');
             $('.outlook-1-windspeed').html('Wind Speed: ' + response.daily.data[1].windSpeed  + ' mph');
@@ -162,7 +162,7 @@ $(document).ready(function() {
 
             // outlook details[2]
             $('.outlook-2-date').html(new Date(response.daily.data[2].time*1000).toDateString());
-            $('.outlook-2-summary').html('Summary: ' + response.daily.data[2].summary);
+            $('.outlook-2-summary').html('Summary: <br>' + response.daily.data[2].summary);
             $('.outlook-2-temphigh').html('High: ' + '<span class="red">' + response.daily.data[2].temperatureMax  + ' °F </span>');
             $('.outlook-2-templow').html('Low: ' + '<span class="blue">' + response.daily.data[2].temperatureMin  + ' °F </span>');
             $('.outlook-2-windspeed').html('Wind Speed: ' + response.daily.data[2].windSpeed  + ' mph');
@@ -194,7 +194,7 @@ $(document).ready(function() {
 
             // outlook details[3]
             $('.outlook-3-date').html(new Date(response.daily.data[3].time*1000).toDateString());
-            $('.outlook-3-summary').html('Summary: ' + response.daily.data[3].summary);
+            $('.outlook-3-summary').html('Summary: <br>' + response.daily.data[3].summary);
             $('.outlook-3-temphigh').html('High: ' + '<span class="red">' + response.daily.data[3].temperatureMax  + ' °F </span>');
             $('.outlook-3-templow').html('Low: ' + '<span class="blue">' + response.daily.data[3].temperatureMin  + ' °F </span>');
             $('.outlook-3-windspeed').html('Wind Speed: ' + response.daily.data[3].windSpeed  + ' mph');
@@ -226,7 +226,7 @@ $(document).ready(function() {
 
             // outlook details[4]
             $('.outlook-4-date').html(new Date(response.daily.data[4].time*1000).toDateString());
-            $('.outlook-4-summary').html('Summary: ' + response.daily.data[4].summary);
+            $('.outlook-4-summary').html('Summary: <br>' + response.daily.data[4].summary);
             $('.outlook-4-temphigh').html('High: ' + '<span class="red">' + response.daily.data[4].temperatureMax  + ' °F </span>');
             $('.outlook-4-templow').html('Low: ' + '<span class="blue">' + response.daily.data[4].temperatureMin  + ' °F </span>');
             $('.outlook-4-windspeed').html('Wind Speed: ' + response.daily.data[4].windSpeed  + ' mph');
@@ -258,7 +258,7 @@ $(document).ready(function() {
 
             // outlook details[5]
             $('.outlook-5-date').html(new Date(response.daily.data[5].time*1000).toDateString());
-            $('.outlook-5-summary').html('Summary: ' + response.daily.data[5].summary);
+            $('.outlook-5-summary').html('Summary: <br>' + response.daily.data[5].summary);
             $('.outlook-5-temphigh').html('High: ' + '<span class="red">' + response.daily.data[5].temperatureMax  + ' °F </span>');
             $('.outlook-5-templow').html('Low: ' + '<span class="blue">' + response.daily.data[5].temperatureMin  + ' °F </span>');
             $('.outlook-5-windspeed').html('Wind Speed: ' + response.daily.data[5].windSpeed  + ' mph');
@@ -290,7 +290,7 @@ $(document).ready(function() {
 
             // outlook details[6]
             $('.outlook-6-date').html(new Date(response.daily.data[6].time*1000).toDateString());
-            $('.outlook-6-summary').html('Summary: ' + response.daily.data[6].summary);
+            $('.outlook-6-summary').html('Summary: <br>' + response.daily.data[6].summary);
             $('.outlook-6-temphigh').html('High: ' + '<span class="red">' + response.daily.data[6].temperatureMax  + ' °F </span>');
             $('.outlook-6-templow').html('Low: ' + '<span class="blue">' + response.daily.data[6].temperatureMin  + ' °F </span>');
             $('.outlook-6-windspeed').html('Wind Speed: ' + response.daily.data[6].windSpeed  + ' mph');
