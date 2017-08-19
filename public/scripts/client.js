@@ -44,7 +44,6 @@ $(document).ready(function() {
         dataType: "jsonp",
         success: function(response) {
             console.log('Dark Sky API response: ', response);
-
             // hiding loader and showing date
             $(".loader-container").hide();
             $(".container").show();
@@ -65,11 +64,9 @@ $(document).ready(function() {
             } else if (response.currently.icon === "clear-night") {
               $('.icon').html('<img src="../public/assets/images/icons/clear-night.png">');
               $('body').css('background-image', "url(http://clear-night.com/img/clear-night-placeholder.jpg)");
-              $('body').css('color', "white");
             } else if (response.currently.icon === "rain") {
               $('.icon').html('<img src="../public/assets/images/icons/rain.png">');//
               $('body').css('background-image', "url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
-              $('body').css('color', "white");
             } else if (response.currently.icon === "snow") {
               $('.icon').html('<img src="../public/assets/images/icons/snow.png">');
               $('body').css('background-image', "url(https://vignette4.wikia.nocookie.net/phobia/images/a/aa/Snow.jpg/revision/latest?cb=20161109045734)");
@@ -91,7 +88,6 @@ $(document).ready(function() {
             } else if (response.currently.icon === "partly-cloudy-night") {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png">');
               $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
-              $('body').css('color', "white");
             } else {
               console.log('response.currently.icon fail');
             };
