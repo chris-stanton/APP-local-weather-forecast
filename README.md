@@ -14,9 +14,10 @@
   1. HTML
   2. CSS
   3. Javascript
-  4. Bootstrap
-  5. jQuery
-  6. Font-awesome
+  4. Dark Sky API
+  5. Google geolocation API
+  6. jQuery
+  7. Font-awesome
 
 ---  
 
