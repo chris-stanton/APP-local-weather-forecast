@@ -98,15 +98,20 @@ $(document).ready(function() {
             // hourly chart
             var data =  {
               labels: [
-                new Date(response.hourly.data[0].time*1000).toTimeString(),
-                new Date(response.hourly.data[1].time*1000).toTimeString(),
-                new Date(response.hourly.data[2].time*1000).toTimeString(),
-                new Date(response.hourly.data[3].time*1000).toTimeString(),
-                new Date(response.hourly.data[4].time*1000).toTimeString(),
-                new Date(response.hourly.data[5].time*1000).toTimeString(),
-                new Date(response.hourly.data[6].time*1000).toTimeString(),
-                new Date(response.hourly.data[7].time*1000).toTimeString()
+                new Date(response.hourly.data[0].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[1].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[2].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[3].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[4].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[5].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[6].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[7].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[8].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[9].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[10].time*1000).getHours() + ":00",
+                new Date(response.hourly.data[11].time*1000).getHours() + ":00"
               ],
+
               series: [
                 [
                   response.hourly.data[0].temperature,
@@ -116,15 +121,28 @@ $(document).ready(function() {
                   response.hourly.data[4].temperature,
                   response.hourly.data[5].temperature,
                   response.hourly.data[6].temperature,
-                  response.hourly.data[7].temperature
+                  response.hourly.data[7].temperature,
+                  response.hourly.data[8].temperature,
+                  response.hourly.data[9].temperature,
+                  response.hourly.data[10].temperature,
+                  response.hourly.data[11].temperature,
                 ]
               ]
             };
 
             var options = {
               height: '200px',
-              position: 'start',
               fullWidth: true,
+              showArea: true,
+              showPoint: true,
+              axisX: {
+                showGrid: false,
+                position: 'end'
+              },
+              axisY: {
+                showGrid: true,
+                position: 'start'
+              },
               chartPadding: {
                 right: 40
               }

@@ -88,6 +88,17 @@ body {
   text-shadow: none;
 }
 
+.ct-label {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.ct-series-a .ct-line{
+  stroke: #ffffff;
+
+}
+
+
 
 .data-outlook {
   display: flex;
