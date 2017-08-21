@@ -63,6 +63,21 @@ body {
   font-size: 20px;
 }
 
+.data-container .data-icon {
+  height: 30px;
+  margin-right: 5px;
+  font-size: 300px;
+}
+
+.data-container .data-span {
+  font-size: 30px;
+}
+
+.data-container .data-summary {
+  font-size: 25px;
+  font-style: italic;
+}
+
 .data-outlook {
   display: flex;
   flex-direction: row;
