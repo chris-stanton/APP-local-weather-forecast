@@ -78,6 +78,17 @@ body {
   font-style: italic;
 }
 
+.chart {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ct-chart {
+  text-shadow: none;
+}
+
+
 .data-outlook {
   display: flex;
   flex-direction: row;

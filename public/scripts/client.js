@@ -92,6 +92,48 @@ $(document).ready(function() {
               console.log('response.currently.icon fail');
             };
 
+
+
+
+            // hourly chart
+            var data =  {
+              labels: [
+                new Date(response.hourly.data[0].time*1000).toTimeString(),
+                new Date(response.hourly.data[1].time*1000).toTimeString(),
+                new Date(response.hourly.data[2].time*1000).toTimeString(),
+                new Date(response.hourly.data[3].time*1000).toTimeString(),
+                new Date(response.hourly.data[4].time*1000).toTimeString(),
+                new Date(response.hourly.data[5].time*1000).toTimeString(),
+                new Date(response.hourly.data[6].time*1000).toTimeString(),
+                new Date(response.hourly.data[7].time*1000).toTimeString()
+              ],
+              series: [
+                [
+                  response.hourly.data[0].temperature,
+                  response.hourly.data[1].temperature,
+                  response.hourly.data[2].temperature,
+                  response.hourly.data[3].temperature,
+                  response.hourly.data[4].temperature,
+                  response.hourly.data[5].temperature,
+                  response.hourly.data[6].temperature,
+                  response.hourly.data[7].temperature
+                ]
+              ]
+            };
+
+            var options = {
+              height: '200px',
+              position: 'start',
+              fullWidth: true,
+              chartPadding: {
+                right: 40
+              }
+
+            };
+
+            new Chartist.Line('.ct-chart', data, options);
+
+
             // outlook details[0]
             $('.outlook-0-date').html(new Date(response.daily.data[0].time*1000).toDateString());
             $('.outlook-0-summary').html('Summary: <br>' + response.daily.data[0].summary);
