@@ -79,7 +79,6 @@ body {
 }
 
 .line-chart {
-  height: 20px;
   border: 1px solid #ffffff;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
