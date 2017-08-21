@@ -78,25 +78,13 @@ body {
   font-style: italic;
 }
 
-.chart {
+.line-chart {
+  height: 20px;
   border: 1px solid #ffffff;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.ct-chart {
-  text-shadow: none;
-}
-
-.ct-label {
-  color: #ffffff;
-  font-size: 15px;
-}
-
-.ct-series-a .ct-line{
-  stroke: #ffffff;
-
-}
 
 
 
