@@ -55,7 +55,7 @@ $(document).ready(function() {
             $('.location').html(response.timezone);
             $('.currenttime').html(new Date(response.currently.time*1000).toDateString());
             $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="orange data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
-            $('.humidity').html('<img src="../public/assets/images/icons/humidity-white.ico" class="data-icon"/> ' + '<span class="data-span">' + ((Math.round(response.currently.humidity)) * 10) + '% </span>');
+            $('.humidity').html('<img src="../public/assets/images/icons/humidity-white.ico" class="data-icon"/> ' + '<span class="purple data-span">' + ((Math.round(response.currently.humidity)) * 10) + '% </span>');
             $('.windspeed').html('<img src="../public/assets/images/icons/wind-white.ico" class="data-icon"/> ' + '<span class="data-span">' + (response.currently.windSpeed) + '</span><span> mph </span>');
             $('.current-summary').html('<div class="data-summary">' + response.currently.summary + '</div>');
 
