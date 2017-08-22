@@ -28,20 +28,28 @@ body {
 
 /*//////////////////////////////   MAIN   ///*/
 
- .location-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
- }
+.location-container {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ margin-right: 25px;
+}
 
- .location-container img {
-  height: 40px;
-  margin-top: 8px;
-  margin-right: 8px;
+.location-container img {
+ height: 40px;
+ margin-top: 8px;
+ margin-right: 8px;
 }
 
 .location-container p {
-  margin-top: 15px;
+ margin-top: 15px;
+}
+
+.container {
+  /*border: 1px solid #ffffff;*/
+  /*border-radius: 5px;*/
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  text-align: center;
 }
 
 .data-container {
@@ -50,9 +58,7 @@ body {
   justify-content: center;
   margin: 10px 0px 10px 0px;
   padding: 15px 0px 15px 0px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #ffffff;
 }
 
 .data-container h4 {
@@ -79,26 +85,23 @@ body {
 }
 
 .line-chart {
-  border: 1px solid #ffffff;
+  margin: 15px 0px 15px 0px;
+  padding: 10px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
+  /*height: 100px;*/
 }
-
-
-
 
 .data-outlook {
   display: flex;
   flex-direction: row;
+  margin: 15px 0px 15px 0px;
+  border-top: 1px solid #ffffff;
 }
 
 .outlook-container {
-  border: 1px solid #ffffff;
-  border-radius: 5px;
   margin: 5px;
   padding: 4px;
   width: 333px;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .outlook-icon {
@@ -198,16 +201,15 @@ body {
   }
 
   .data-container {
-    border: none;
     background-color: transparent;
   }
 
   .data-outlook {
     flex-direction: column;
+    border-top: none;
   }
 
   .outlook-container {
-
     background-color: transparent;
     border: none;
     border-top: 1px solid #ffffff;

@@ -7,8 +7,8 @@ $(document).ready(function() {
     var lat = 0;
 
     // hiding all elements and showing loader
+    $(".location-container").hide();
     $(".container").hide();
-    $(".data-outlook").hide();
     $(".loader-container").show();
     $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
     $('.data-outlook').css('color', "white");
@@ -29,6 +29,8 @@ $(document).ready(function() {
         dataType: "json",
         success: function(response) {
             console.log('Google API response: ', response);
+
+              // setting current location to DOM
               $('.city').html(response.results[0].address_components[2].long_name);
               $('.county').html(response.results[0].address_components[3].long_name);
               $('.state').html(response.results[0].address_components[4].long_name + ' ,');
@@ -46,8 +48,8 @@ $(document).ready(function() {
             console.log('Dark Sky API response: ', response);
             // hiding loader and showing date
             $(".loader-container").hide();
+            $(".location-container").show();
             $(".container").show();
-            $(".data-outlook").show();
 
             // placing data on DOM
             $('.location').html(response.timezone);
@@ -60,34 +62,34 @@ $(document).ready(function() {
             // setting weather icons and background images to current weather conditions
             if (response.currently.icon === "clear-day") {
               $('.icon').html('<img src="../public/assets/images/icons/clear-day.png">');//
-              $('body').css('background-image', "url(http://crevisio.com/images/posts/96/yjf9TgZEw/Crevisio-96-yjf9TgZEw.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://crevisio.com/images/posts/96/yjf9TgZEw/Crevisio-96-yjf9TgZEw.jpg)");
             } else if (response.currently.icon === "clear-night") {
               $('.icon').html('<img src="../public/assets/images/icons/clear-night.png">');
-              $('body').css('background-image', "url(http://clear-night.com/img/clear-night-placeholder.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://clear-night.com/img/clear-night-placeholder.jpg)");
             } else if (response.currently.icon === "rain") {
               $('.icon').html('<img src="../public/assets/images/icons/rain.png">');//
-              $('body').css('background-image', "url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
             } else if (response.currently.icon === "snow") {
               $('.icon').html('<img src="../public/assets/images/icons/snow.png">');
-              $('body').css('background-image', "url(https://vignette4.wikia.nocookie.net/phobia/images/a/aa/Snow.jpg/revision/latest?cb=20161109045734)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://vignette4.wikia.nocookie.net/phobia/images/a/aa/Snow.jpg/revision/latest?cb=20161109045734)");
             } else if (response.currently.icon === "sleet") {
               $('.icon').html('<img src="../public/assets/images/icons/sleet.png">');
-              $('body').css('background-image', "url(http://www.abccolumbia.com/wp-content/uploads/2016/01/Image4.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://www.abccolumbia.com/wp-content/uploads/2016/01/Image4.jpg)");
             } else if (response.currently.icon === "wind") {
               $('.icon').html('<img src="../public/assets/images/icons/wind.png">');
-              $('body').css('background-image', "url(https://media.mnn.com/assets/images/2016/05/01-windydog-carloscherer.jpg.838x0_q80.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://media.mnn.com/assets/images/2016/05/01-windydog-carloscherer.jpg.838x0_q80.jpg)");
             } else if (response.currently.icon === "fog") {
               $('.icon').html('<img src="../public/assets/images/icons/fog.png">');
-              $('body').css('background-image', "url(https://www.howitworksdaily.com/wp-content/uploads/2014/08/fog-06.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://www.howitworksdaily.com/wp-content/uploads/2014/08/fog-06.jpg)");
             } else if (response.currently.icon === "cloudy") {
               $('.icon').html('<img src="../public/assets/images/icons/cloudy.png">');
-              $('body').css('background-image', "url(http://www.quotemaster.org/images/d9/d982a47690bc30527138826a3b13206e.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://www.quotemaster.org/images/d9/d982a47690bc30527138826a3b13206e.jpg)");
             } else if (response.currently.icon === "partly-cloudy-day") {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png">');
-              $('body').css('background-image', "url(https://ak9.picdn.net/shutterstock/videos/9503747/thumb/1.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://ak9.picdn.net/shutterstock/videos/9503747/thumb/1.jpg)");
             } else if (response.currently.icon === "partly-cloudy-night") {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png">');
-              $('body').css('background-image', "url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
             } else {
               console.log('response.currently.icon fail');
             };
@@ -95,7 +97,7 @@ $(document).ready(function() {
 
             var ctx = document.getElementById("myChart").getContext('2d');
             var myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: [
                       new Date(response.hourly.data[0].time*1000).getHours() + ":00",
@@ -112,7 +114,7 @@ $(document).ready(function() {
                       new Date(response.hourly.data[11].time*1000).getHours() + ":00"
                     ],
                     datasets: [{
-                        label: 'Hourly Forecast',
+                        label: 'Hourly Forecast (°F)',
                         data: [
                           response.hourly.data[0].temperature,
                           response.hourly.data[1].temperature,
@@ -128,34 +130,13 @@ $(document).ready(function() {
                           response.hourly.data[11].temperature
                         ],
                         backgroundColor: [
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)',
-                            'rgba(0, 54, 246, 0.6)'
+                            '#ffffff'
                         ],
                         borderColor: [
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
-                            '#3204b5',
                             '#3204b5'
                         ],
-                        borderWidth: 1
+                        borderWidth: 4,
+                        fill: false
                     }]
                 },
                 options: {
@@ -167,14 +148,15 @@ $(document).ready(function() {
                   scales: {
                     yAxes: [{
                       ticks: {
-                        beginAtZero:true,
-                        fontColor: '#ffffff'
+                        beginAtZero:false,
+                        fontSize: '15',
+                        fontColor: '#ff7300'
                       }
                     }],
                     xAxes: [{
                       ticks: {
                         fontColor: '#ffffff',
-                        fontSize: '20'
+                        fontSize: '15'
                       }
                     }]
                   }
