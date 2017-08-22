@@ -16,7 +16,7 @@ $(document).ready(function() {
     // getting current location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-
+      console.log('position :', position);
       // geolocation response setting to variable
       lat = position.coords.latitude;
       long = position.coords.longitude;
@@ -95,8 +95,8 @@ $(document).ready(function() {
             };
 
 
-            var ctx = document.getElementById("myChart").getContext('2d');
-            var myChart = new Chart(ctx, {
+            var ctx_hourly = document.getElementById("hourlyChart").getContext('2d');
+            var hourlyChart = new Chart(ctx_hourly, {
                 type: 'line',
                 data: {
                     labels: [
@@ -132,11 +132,14 @@ $(document).ready(function() {
                           response.hourly.data[11].temperature
                         ],
                         backgroundColor: [
-                            '#ffffff'
+                            '#ff0000'
                         ],
                         borderColor: [
                             '#ff0000'
                         ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#ff0000',
                         borderWidth: 4,
                         fill: false
                       },
@@ -158,11 +161,14 @@ $(document).ready(function() {
                           response.hourly.data[11].apparentTemperature
                         ],
                         backgroundColor: [
-                            '#ffffff'
+                            '#ff7300'
                         ],
                         borderColor: [
                             '#ff7300'
                         ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#ff7300',
                         borderWidth: 4,
                         fill: false
                       },
@@ -184,16 +190,19 @@ $(document).ready(function() {
                           response.hourly.data[11].humidity
                         ],
                         backgroundColor: [
-                            '#ffffff'
+                            '#be15e8'
                         ],
                         borderColor: [
                             '#be15e8'
                         ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#be15e8',
                         borderWidth: 4,
                         fill: false
                       },
                       {
-                        label: 'Hourly Chance of Rain (%)',
+                        label: 'Hourly Chance of Percipitation (%)',
                         hidden: true,
                         data: [
                           response.hourly.data[0].precipProbability,
@@ -210,11 +219,14 @@ $(document).ready(function() {
                           response.hourly.data[11].precipProbability
                         ],
                         backgroundColor: [
-                            '#ffffff'
+                            '#3204b5'
                         ],
                         borderColor: [
                             '#3204b5'
                         ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#3204b5',
                         borderWidth: 4,
                         fill: false
                       },
@@ -223,6 +235,11 @@ $(document).ready(function() {
 
                 options: {
                   tooltips: {
+                    titleFontColor: '#05ff00',
+                    titleFontSize: 15,
+                    titleFontStyle: 'italic',
+                    titleMarginBottom: 10,
+                    bodyFontSize: 18,
                     callbacks: {
                       label: function(tooltipItem, data) {
                         var datasetLabel = 'Summary';
@@ -233,8 +250,10 @@ $(document).ready(function() {
                   },
 
                   legend: {
+                    position: 'top',
                     labels: {
                       fontColor: '#ffffff',
+                      padding: 30,
                       fontSize: 15,
                       boxWidth: 12
                     }
@@ -262,6 +281,203 @@ $(document).ready(function() {
                   } //end scales
                 } //end options
             }); // end myChart
+
+
+
+            var ctx_daily = document.getElementById("dailyChart").getContext('2d');
+            var dailyChart = new Chart(ctx_daily, {
+                type: 'line',
+                data: {
+                    labels: [
+                      new Date(response.daily.data[0].time*1000).toDateString(),
+                      new Date(response.daily.data[1].time*1000).toDateString(),
+                      new Date(response.daily.data[2].time*1000).toDateString(),
+                      new Date(response.daily.data[3].time*1000).toDateString(),
+                      new Date(response.daily.data[4].time*1000).toDateString(),
+                      new Date(response.daily.data[5].time*1000).toDateString(),
+                      new Date(response.daily.data[6].time*1000).toDateString()
+                    ],
+                    datasets: [
+                      {
+                        label: 'Daily High Temperature (°F)',
+                        hidden: false,
+                        data: [
+                          response.daily.data[0].temperatureMax,
+                          response.daily.data[1].temperatureMax,
+                          response.daily.data[2].temperatureMax,
+                          response.daily.data[3].temperatureMax,
+                          response.daily.data[4].temperatureMax,
+                          response.daily.data[5].temperatureMax,
+                          response.daily.data[6].temperatureMax
+                        ],
+                        backgroundColor: [
+                            '#ff0000'
+                        ],
+                        borderColor: [
+                            '#ff0000'
+                        ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#ff0000',
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Daily Low Temperature (°F)',
+                        hidden: true,
+                        data: [
+                          response.daily.data[0].temperatureMin,
+                          response.daily.data[1].temperatureMin,
+                          response.daily.data[2].temperatureMin,
+                          response.daily.data[3].temperatureMin,
+                          response.daily.data[4].temperatureMin,
+                          response.daily.data[5].temperatureMin,
+                          response.daily.data[6].temperatureMin
+                        ],
+                        backgroundColor: [
+                            '#3e80ff'
+                        ],
+                        borderColor: [
+                            '#3e80ff'
+                        ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#3e80ff',
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Daily Humidity (%)',
+                        hidden: true,
+                        data: [
+                          response.daily.data[0].humidity,
+                          response.daily.data[1].humidity,
+                          response.daily.data[2].humidity,
+                          response.daily.data[3].humidity,
+                          response.daily.data[4].humidity,
+                          response.daily.data[5].humidity,
+                          response.daily.data[6].humidity
+                        ],
+                        backgroundColor: [
+                            '#be15e8'
+                        ],
+                        borderColor: [
+                            '#be15e8'
+                        ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#be15e8',
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Daily Chance of Percipitation (%)',
+                        hidden: true,
+                        data: [
+                          response.daily.data[0].precipProbability,
+                          response.daily.data[1].precipProbability,
+                          response.daily.data[2].precipProbability,
+                          response.daily.data[3].precipProbability,
+                          response.daily.data[4].precipProbability,
+                          response.daily.data[5].precipProbability,
+                          response.daily.data[6].precipProbability
+                        ],
+                        backgroundColor: [
+                            '#3204b5'
+                        ],
+                        borderColor: [
+                            '#3204b5'
+                        ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#ffffff',
+                        pointBackgroundColor: '#3204b5',
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Daily Wind Speed (mph)',
+                        hidden: true,
+                        data: [
+                          response.daily.data[0].windSpeed,
+                          response.daily.data[1].windSpeed,
+                          response.daily.data[2].windSpeed,
+                          response.daily.data[3].windSpeed,
+                          response.daily.data[4].windSpeed,
+                          response.daily.data[5].windSpeed,
+                          response.daily.data[6].windSpeed
+                        ],
+                        backgroundColor: [
+                            '#ffffff'
+                        ],
+                        borderColor: [
+                            '#ffffff'
+                        ],
+                        pointHoverRadius: 10,
+                        pointHoverBorderColor: '#000000',
+                        pointBackgroundColor: '#ffffff',
+                        borderWidth: 4,
+                        fill: false
+                      }
+                    ]
+                },
+
+                options: {
+                  tooltips: {
+                    titleFontColor: '#05ff00',
+                    titleFontSize: 15,
+                    titleFontStyle: 'italic',
+                    titleMarginBottom: 10,
+                    bodyFontSize: 18,
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var datasetLabel = 'Summary';
+                        var label = response.daily.data[tooltipItem.index].summary;
+                        return datasetLabel + ': ' + label;
+                      }
+                    }
+                  },
+
+                  legend: {
+                    position: 'top',
+                    labels: {
+                      fontColor: '#ffffff',
+                      padding: 30,
+                      fontSize: 15,
+                      boxWidth: 12
+                    }
+                  },
+
+                  scales: {
+                    yAxes: [{
+                      gridLines: {
+                        display: true,
+                        color: "rgba(128, 128, 128, 0.3)"
+                      },
+                      ticks: {
+                        beginAtZero:false,
+                        fontSize: 15,
+                        fontColor: '#ff7300',
+                        padding: 10
+                      }
+                    }],
+                    xAxes: [{
+                      ticks: {
+                        fontColor: '#ffffff',
+                        fontSize: 15
+                      }
+                    }]
+                  } //end scales
+                } //end options
+            }); // end myChart
+
+
+
+
+
+
+
+
+
 
             // outlook details[0]
             $('.outlook-0-date').html(new Date(response.daily.data[0].time*1000).toDateString());
