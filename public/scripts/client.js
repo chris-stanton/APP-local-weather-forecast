@@ -113,8 +113,10 @@ $(document).ready(function() {
                       new Date(response.hourly.data[10].time*1000).getHours() + ":00",
                       new Date(response.hourly.data[11].time*1000).getHours() + ":00"
                     ],
-                    datasets: [{
-                        label: 'Hourly Forecast (°F)',
+                    datasets: [
+                      {
+                        label: 'Hourly High Temperature (°F)',
+                        hidden: true,
                         data: [
                           response.hourly.data[0].temperature,
                           response.hourly.data[1].temperature,
@@ -133,35 +135,133 @@ $(document).ready(function() {
                             '#ffffff'
                         ],
                         borderColor: [
+                            '#ff0000'
+                        ],
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Hourly "Feels Like" Temperature (°F)',
+                        hidden: false,
+                        data: [
+                          response.hourly.data[0].apparentTemperature,
+                          response.hourly.data[1].apparentTemperature,
+                          response.hourly.data[2].apparentTemperature,
+                          response.hourly.data[3].apparentTemperature,
+                          response.hourly.data[4].apparentTemperature,
+                          response.hourly.data[5].apparentTemperature,
+                          response.hourly.data[6].apparentTemperature,
+                          response.hourly.data[7].apparentTemperature,
+                          response.hourly.data[8].apparentTemperature,
+                          response.hourly.data[9].apparentTemperature,
+                          response.hourly.data[10].apparentTemperature,
+                          response.hourly.data[11].apparentTemperature
+                        ],
+                        backgroundColor: [
+                            '#ffffff'
+                        ],
+                        borderColor: [
+                            '#ff7300'
+                        ],
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Hourly Humidity (%)',
+                        hidden: true,
+                        data: [
+                          response.hourly.data[0].humidity,
+                          response.hourly.data[1].humidity,
+                          response.hourly.data[2].humidity,
+                          response.hourly.data[3].humidity,
+                          response.hourly.data[4].humidity,
+                          response.hourly.data[5].humidity,
+                          response.hourly.data[6].humidity,
+                          response.hourly.data[7].humidity,
+                          response.hourly.data[8].humidity,
+                          response.hourly.data[9].humidity,
+                          response.hourly.data[10].humidity,
+                          response.hourly.data[11].humidity
+                        ],
+                        backgroundColor: [
+                            '#ffffff'
+                        ],
+                        borderColor: [
+                            '#be15e8'
+                        ],
+                        borderWidth: 4,
+                        fill: false
+                      },
+                      {
+                        label: 'Hourly Chance of Rain (%)',
+                        hidden: true,
+                        data: [
+                          response.hourly.data[0].precipProbability,
+                          response.hourly.data[1].precipProbability,
+                          response.hourly.data[2].precipProbability,
+                          response.hourly.data[3].precipProbability,
+                          response.hourly.data[4].precipProbability,
+                          response.hourly.data[5].precipProbability,
+                          response.hourly.data[6].precipProbability,
+                          response.hourly.data[7].precipProbability,
+                          response.hourly.data[8].precipProbability,
+                          response.hourly.data[9].precipProbability,
+                          response.hourly.data[10].precipProbability,
+                          response.hourly.data[11].precipProbability
+                        ],
+                        backgroundColor: [
+                            '#ffffff'
+                        ],
+                        borderColor: [
                             '#3204b5'
                         ],
                         borderWidth: 4,
                         fill: false
-                    }]
+                      },
+                    ]
                 },
+
                 options: {
-                  legend: {
-                    labels: {
-                      fontColor: '#ffffff'
+                  tooltips: {
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var datasetLabel = 'Summary';
+                        var label = response.hourly.data[tooltipItem.index].summary;
+                        return datasetLabel + ': ' + label;
+                      }
                     }
                   },
+
+                  legend: {
+                    labels: {
+                      fontColor: '#ffffff',
+                      fontSize: 15,
+                      boxWidth: 12
+                    }
+                  },
+
                   scales: {
                     yAxes: [{
+                      gridLines: {
+                        display: true,
+                        color: "rgba(128, 128, 128, 0.3)"
+                      },
                       ticks: {
                         beginAtZero:false,
-                        fontSize: '15',
-                        fontColor: '#ff7300'
+                        fontSize: 15,
+                        fontColor: '#ff7300',
+                        padding: 10
                       }
                     }],
                     xAxes: [{
                       ticks: {
                         fontColor: '#ffffff',
-                        fontSize: '15'
+                        fontSize: 15,
                       }
                     }]
-                  }
-                }
-            });
+                  } //end scales
+                } //end options
+            }); // end myChart
 
             // outlook details[0]
             $('.outlook-0-date').html(new Date(response.daily.data[0].time*1000).toDateString());
@@ -393,3 +493,33 @@ $(document).ready(function() {
     }); // end get current position
   } // end geolocation
 }); // end document ready function
+
+
+
+
+
+
+
+//
+// {
+//   label: 'Daily High Temperature (°F)',
+//   hidden: true,
+//   data: [
+//     response.daily.data[0].temperatureMax,
+//     response.daily.data[1].temperatureMax,
+//     response.daily.data[2].temperatureMax,
+//     response.daily.data[3].temperatureMax,
+//     response.daily.data[4].temperatureMax,
+//     response.daily.data[5].temperatureMax,
+//     response.daily.data[6].temperatureMax,
+//     response.daily.data[7].temperatureMax
+//   ],
+//   backgroundColor: [
+//       '#ffffff'
+//   ],
+//   borderColor: [
+//       '#3204b5'
+//   ],
+//   borderWidth: 4,
+//   fill: false
+// }
