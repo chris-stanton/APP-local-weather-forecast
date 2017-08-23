@@ -90,7 +90,7 @@ $(document).ready(function() {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png">');
               $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
             } else {
-              console.log('response.currently.icon fail');
+              console.log('Failed to load response.currently.icon');
             };
 
 
@@ -507,7 +507,7 @@ $(document).ready(function() {
               } else if (response.daily.data[0].icon === "partly-cloudy-night") {
                 $('.outlook-0-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[0].icon failed');
+                console.log('Faled to load response.daily.data[0].icon');
               };
 
             // outlook details[1]
@@ -539,7 +539,7 @@ $(document).ready(function() {
               } else if (response.daily.data[1].icon === "partly-cloudy-night") {
                 $('.outlook-1-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[1].icon failed');
+                console.log('Faled to load response.daily.data[1].icon');
               };
 
             // outlook details[2]
@@ -571,7 +571,7 @@ $(document).ready(function() {
               } else if (response.daily.data[2].icon === "partly-cloudy-night") {
                 $('.outlook-2-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[2].icon failed');
+                console.log('Faled to load response.daily.data[2].icon');
               };
 
             // outlook details[3]
@@ -603,7 +603,7 @@ $(document).ready(function() {
               } else if (response.daily.data[3].icon === "partly-cloudy-night") {
                 $('.outlook-3-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[3].icon failed');
+                console.log('Faled to load response.daily.data[3].icon');
               };
 
             // outlook details[4]
@@ -635,7 +635,7 @@ $(document).ready(function() {
               } else if (response.daily.data[4].icon === "partly-cloudy-night") {
                 $('.outlook-4-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[4].icon failed');
+                console.log('Faled to load response.daily.data[4].icon');
               };
 
             // outlook details[5]
@@ -667,7 +667,7 @@ $(document).ready(function() {
               } else if (response.daily.data[5].icon === "partly-cloudy-night") {
                 $('.outlook-5-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[5].icon failed');
+                console.log('Faled to load response.daily.data[5].icon');
               };
 
             // outlook details[6]
@@ -699,7 +699,7 @@ $(document).ready(function() {
               } else if (response.daily.data[6].icon === "partly-cloudy-night") {
                 $('.outlook-6-icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png" class="outlook-icon">');
               } else {
-                console.log('response.daily.data[6].icon failed');
+                console.log('Faled to load response.daily.data[6].icon');
               };
 
 
