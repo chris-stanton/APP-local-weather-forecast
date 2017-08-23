@@ -28,13 +28,12 @@ $(document).ready(function() {
         url: google,
         dataType: "json",
         success: function(response) {
-            console.log('Google API response: ', response);
-
-              // setting current location to DOM
-              $('.city').html(response.results[0].address_components[2].long_name);
-              $('.county').html(response.results[0].address_components[3].long_name);
-              $('.state').html(response.results[0].address_components[4].long_name + ' ,');
-              $('.zipcode').html(response.results[0].address_components[6].long_name);
+          console.log('Google API response: ', response);
+            // setting current location to DOM
+            $('.city').html(response.results[0].address_components[2].long_name);
+            $('.county').html(response.results[0].address_components[3].long_name);
+            $('.state').html(response.results[0].address_components[4].long_name + ' ,');
+            $('.zipcode').html(response.results[0].address_components[6].long_name);
           } // end of success
       }); // end of ajax
 
@@ -45,7 +44,7 @@ $(document).ready(function() {
         url: dark_sky,
         dataType: "jsonp",
         success: function(response) {
-            console.log('Dark Sky API response: ', response);
+          console.log('Dark Sky API response: ', response);
             // hiding loader and showing date
             $(".loader-container").hide();
             $(".location-container").show();
