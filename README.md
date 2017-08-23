@@ -4,7 +4,7 @@
 ---
 
 ## Description
-##### Weather app data for current location. All icons and backgrounds change to describe current weather conditions.  Application is mobile and desktop friendly.
+##### Weather app data for current location. Weather detail include hourly and daily details. All icons and backgrounds change to describe current weather conditions.  Application is mobile and desktop friendly.
 
 <img src="./public/assets/images/screenshots/desktop-one.png" width="50%">
 
