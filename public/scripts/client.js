@@ -16,7 +16,7 @@ $(document).ready(function() {
     // getting current location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      console.log('position :', position);
+      console.log('Local position: ', position);
       // geolocation response setting to variable
       lat = position.coords.latitude;
       long = position.coords.longitude;
