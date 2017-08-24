@@ -1,5 +1,5 @@
 
-# Local Forecast Weather App
+# Local Weather Forecast App
 
 ---
 
