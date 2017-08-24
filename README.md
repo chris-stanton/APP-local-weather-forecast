@@ -44,6 +44,7 @@
   5. Google geolocation API
   6. jQuery
   7. Font-awesome
+  8. ChartJS
 
 ---  
 
