@@ -113,6 +113,14 @@ body {
   margin: 4px 0px 4px 0px;
 }
 
+footer div {
+ text-align: center;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+}
+
 /*//////////////////////////////   LOADER   ///*/
 .loader-container h1 {
   margin-top: 80px;
