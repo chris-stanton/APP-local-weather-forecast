@@ -479,15 +479,6 @@ $(document).ready(function() {
                 } //end options
             }); // end myChart
 
-
-
-
-
-
-
-
-
-
             // outlook details[0]
             $('.outlook-0-date').html(new Date(response.daily.data[0].time*1000).toDateString());
             $('.outlook-0-summary').html('Summary: <br>' + response.daily.data[0].summary);
@@ -711,8 +702,6 @@ $(document).ready(function() {
               } else {
                 console.log('Faled to load response.daily.data[6].icon');
               };
-
-
         } // end success
       }); // end ajax
     }); // end get current position
