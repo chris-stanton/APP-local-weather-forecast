@@ -280,6 +280,10 @@ $(document).ready(function() {
                       }
                     }],
                     xAxes: [{
+                      gridLines: {
+                        display: true,
+                        color: "rgba(128, 128, 128, 0.3)"
+                      },
                       ticks: {
                         fontColor: '#ffffff',
                         fontSize: 15,
@@ -470,6 +474,10 @@ $(document).ready(function() {
                       }
                     }],
                     xAxes: [{
+                      gridLines: {
+                        display: true,
+                        color: "rgba(128, 128, 128, 0.3)"
+                      },
                       ticks: {
                         fontColor: '#ffffff',
                         fontSize: 15
