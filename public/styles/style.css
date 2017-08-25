@@ -124,10 +124,9 @@ body {
 }
 
 .loader {
-  color: #37f0d4;
-  text-shadow: 3px 3px 3px #000000;
-  /*opacity: 0.5;*/
   font-size: 40px;
+  color: #ffffff;
+  opacity: 0.7;
   margin: 100px auto;
   width: 1em;
   height: 1em;
