@@ -113,6 +113,10 @@ body {
   margin: 4px 0px 4px 0px;
 }
 
+footer {
+  padding-top: 20px;
+}
+
 footer div {
  text-align: center;
  position: fixed;
