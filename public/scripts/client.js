@@ -22,7 +22,7 @@ $(document).ready(function() {
       long = position.coords.longitude;
 
       // API query key to get address details bassed from lat/long
-      var google =  "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyDp0HzZ2Mydb4qQsMKpMgkIQPxN3x5-gdE";
+      var google = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyDp0HzZ2Mydb4qQsMKpMgkIQPxN3x5-gdE";
       $.ajax({
         type: "GET",
         url: google,
