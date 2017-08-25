@@ -53,7 +53,13 @@ $(document).ready(function() {
             // placing data on DOM
             $('.location').html(response.timezone);
             $('.currenttime').html(new Date(response.currently.time*1000).toDateString());
-            $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="orange data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
+            if (Math.round(response.currently.temperature) <= 32) {
+              $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="blue data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
+            } else if (Math.round(response.currently.temperature) >= Math.round(response.daily.data[0].temperatureMax)) {
+              $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="red data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
+            } else {
+              $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="orange data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
+            }
             $('.humidity').html('<img src="../public/assets/images/icons/humidity-white.ico" class="data-icon"/> ' + '<span class="purple data-span">' + ((Math.round(response.currently.humidity)) * 10) + '% </span>');
             $('.windspeed').html('<img src="../public/assets/images/icons/wind-white.ico" class="data-icon"/> ' + '<span class="data-span">' + (response.currently.windSpeed) + '</span><span> mph </span>');
             $('.current-summary').html('<div class="data-summary">' + response.currently.summary + '</div>');
