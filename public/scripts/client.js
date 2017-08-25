@@ -442,7 +442,7 @@ $(document).ready(function() {
                         var tempMax_label = "Temp High";
                         var tempMax_data = response.daily.data[tooltipItem.index].temperatureMax;
                         return tempMax_label + ': ' + tempMax_data + '   ' + summary_label + ': ' + summary_data;
-                      }
+                      } 
                     }
                   },
 
