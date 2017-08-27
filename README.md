@@ -18,6 +18,10 @@
   9. Partly Cloudy Daily
   10. Partly Cloudy Night
 
+- *Loader (searching for location on init)*
+
+  <img src="./public/assets/images/screenshots/loader.png" width="50%">
+
 - *Desktop Views*
 
   <img src="./public/assets/images/screenshots/desktop-one.png" width="50%">
