@@ -6,12 +6,13 @@ $(document).ready(function() {
     var long = 0;
     var lat = 0;
 
-    // hiding all elements and showing loader
+    // hiding all elements and showing only loader
     $(".location-container").hide();
     $(".container").hide();
     $(".loader-container").show();
-    $("body").css('background-image','url(../public/assets/images/backgrounds/loader.png)');
-    $('.data-outlook').css('color', "white");
+      // CSS changes
+      $("body").css('background-image','url(https://www.howitworksdaily.com/wp-content/uploads/2014/08/fog-06.jpg)');
+      $('.data-outlook').css('color', "white");
 
     // getting current location
   if (navigator.geolocation) {
@@ -45,7 +46,7 @@ $(document).ready(function() {
         dataType: "jsonp",
         success: function(response) {
           console.log('Dark Sky API response: ', response);
-            // hiding loader and showing date
+            // hiding loader and showing data
             $(".loader-container").hide();
             $(".location-container").show();
             $(".container").show();
@@ -100,6 +101,7 @@ $(document).ready(function() {
             };
 
 
+            // hourly chartJS
             var ctx_hourly = document.getElementById("hourlyChart").getContext('2d');
             var hourlyChart = new Chart(ctx_hourly, {
                 type: 'line',
@@ -294,7 +296,7 @@ $(document).ready(function() {
             }); // end myChart
 
 
-
+            // daily chartJS
             var ctx_daily = document.getElementById("dailyChart").getContext('2d');
             var dailyChart = new Chart(ctx_daily, {
                 type: 'line',
