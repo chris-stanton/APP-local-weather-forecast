@@ -100,7 +100,6 @@ $(document).ready(function() {
               console.log('Failed to load response.currently.icon');
             };
 
-
             // hourly chartJS
             var ctx_hourly = document.getElementById("hourlyChart").getContext('2d');
             var hourlyChart = new Chart(ctx_hourly, {
