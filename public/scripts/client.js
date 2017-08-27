@@ -238,8 +238,15 @@ $(document).ready(function() {
                       },
                     ]
                 },
-
                 options: {
+                  layout: {
+                    padding: {
+                      left: 0,
+                      right: 0,
+                      top: 0,
+                      bottom: 0
+                    }
+                  },
                   tooltips: {
                     titleFontColor: '#05ff00',
                     titleFontSize: 15,
@@ -256,7 +263,6 @@ $(document).ready(function() {
                       }
                     }
                   },
-
                   legend: {
                     position: 'right',
                     labels: {
@@ -266,7 +272,6 @@ $(document).ready(function() {
                       boxWidth: 12
                     }
                   },
-
                   scales: {
                     yAxes: [{
                       gridLines: {
@@ -433,8 +438,15 @@ $(document).ready(function() {
                       }
                     ]
                 },
-
                 options: {
+                  layout: {
+                    padding: {
+                      left: 0,
+                      right: 0,
+                      top: 0,
+                      bottom: 0
+                    }
+                  },
                   tooltips: {
                     titleFontColor: '#05ff00',
                     titleFontSize: 15,
@@ -451,7 +463,6 @@ $(document).ready(function() {
                       }
                     }
                   },
-
                   legend: {
                     position: 'top',
                     labels: {
@@ -461,7 +472,6 @@ $(document).ready(function() {
                       boxWidth: 12
                     }
                   },
-
                   scales: {
                     yAxes: [{
                       gridLines: {
