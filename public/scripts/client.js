@@ -54,9 +54,9 @@ $(document).ready(function() {
             // placing data on DOM
             $('.location').html(response.timezone);
             $('.currenttime').html(new Date(response.currently.time*1000).toDateString());
-            if (Math.round(response.currently.temperature) <= 32) {
+            if (response.currently.temperature <= 32) {
               $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="blue data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
-            } else if (Math.round(response.currently.temperature) >= Math.round(response.daily.data[0].temperatureMax)) {
+            } else if (response.currently.temperature >= response.daily.data[0].temperatureMax) {
               $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="red data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
             } else {
               $('.temp').html('<img src="../public/assets/images/icons/temperature-white.ico" class="data-icon"/> ' +  '<span class="orange data-span">' + Math.round(response.currently.temperature) + ' °F </span>');
@@ -259,7 +259,7 @@ $(document).ready(function() {
                   },
 
                   legend: {
-                    position: 'top',
+                    position: 'right',
                     labels: {
                       fontColor: '#ffffff',
                       padding: 30,
@@ -278,7 +278,7 @@ $(document).ready(function() {
                         beginAtZero:false,
                         fontSize: 15,
                         fontColor: '#ff7300',
-                        padding: 10
+                        padding: 12
                       }
                     }],
                     xAxes: [{
@@ -288,7 +288,8 @@ $(document).ready(function() {
                       },
                       ticks: {
                         fontColor: '#ffffff',
-                        fontSize: 15,
+                        fontSize: 15
+                        // minRotation: 45
                       }
                     }]
                   } //end scales
@@ -469,10 +470,10 @@ $(document).ready(function() {
                         color: "rgba(128, 128, 128, 0.3)"
                       },
                       ticks: {
-                        beginAtZero:false,
+                        beginAtZero: false,
                         fontSize: 15,
                         fontColor: '#ff7300',
-                        padding: 10
+                        padding: 12
                       }
                     }],
                     xAxes: [{
@@ -483,6 +484,7 @@ $(document).ready(function() {
                       ticks: {
                         fontColor: '#ffffff',
                         fontSize: 15
+                        // minRotation: 5
                       }
                     }]
                   } //end scales
