@@ -45,6 +45,7 @@
   6. jQuery
   7. Font-awesome
   8. ChartJS
+  9. Flex Box
 
 ---  
 
