@@ -249,9 +249,9 @@ $(document).ready(function() {
                       label: function(tooltipItem, data) {
                         var label = 'Summary';
                         var hourly_data = response.hourly.data[tooltipItem.index].summary;
-                        var label_temp = 'Current Temp';
+                        var label_temp = '°F';
                         var hourly_highTemp = response.hourly.data[tooltipItem.index].temperature;
-                        return label_temp + ': ' + hourly_highTemp + '   ' + label + ': ' + hourly_data;
+                        return hourly_highTemp + label_temp + '   ' + label + ': ' + hourly_data;
                       }
                     }
                   },
@@ -445,7 +445,7 @@ $(document).ready(function() {
                         var summary_data = response.daily.data[tooltipItem.index].summary;
                         var tempMax_label = "Temp High";
                         var tempMax_data = response.daily.data[tooltipItem.index].temperatureMax;
-                        return tempMax_label + ': ' + tempMax_data + '   ' + summary_label + ': ' + summary_data;
+                        return tempMax_label + ': ' + tempMax_data + '°F' + '   ' + summary_label + ': ' + summary_data;
                       }
                     }
                   },
