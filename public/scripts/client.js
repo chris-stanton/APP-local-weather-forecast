@@ -11,7 +11,7 @@ $(document).ready(function() {
     $(".container").hide();
     $(".loader-container").show();
       // CSS changes
-      $("body").css('background-image','url(https://www.howitworksdaily.com/wp-content/uploads/2014/08/fog-06.jpg)');
+      $("body").css('background-image','url(../public/assets/images/backgrounds/fog.png)');
       $('.data-outlook').css('color', "white");
 
     // getting current location
@@ -74,28 +74,28 @@ $(document).ready(function() {
               $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/clear-night.png)");
             } else if (response.currently.icon === "rain") {
               $('.icon').html('<img src="../public/assets/images/icons/rain.png">');//
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/rain.png)");
             } else if (response.currently.icon === "snow") {
               $('.icon').html('<img src="../public/assets/images/icons/snow.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://vignette4.wikia.nocookie.net/phobia/images/a/aa/Snow.jpg/revision/latest?cb=20161109045734)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/snow.png)");
             } else if (response.currently.icon === "sleet") {
               $('.icon').html('<img src="../public/assets/images/icons/sleet.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://www.abccolumbia.com/wp-content/uploads/2016/01/Image4.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/sleet.png)");
             } else if (response.currently.icon === "wind") {
               $('.icon').html('<img src="../public/assets/images/icons/wind.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://media.mnn.com/assets/images/2016/05/01-windydog-carloscherer.jpg.838x0_q80.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/wind.png)");
             } else if (response.currently.icon === "fog") {
               $('.icon').html('<img src="../public/assets/images/icons/fog.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://www.howitworksdaily.com/wp-content/uploads/2014/08/fog-06.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/fog.png)");
             } else if (response.currently.icon === "cloudy") {
               $('.icon').html('<img src="../public/assets/images/icons/cloudy.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://www.quotemaster.org/images/d9/d982a47690bc30527138826a3b13206e.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/cloudy.png)");
             } else if (response.currently.icon === "partly-cloudy-day") {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-day.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://ak9.picdn.net/shutterstock/videos/9503747/thumb/1.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/partly-cloudy-day.png)");
             } else if (response.currently.icon === "partly-cloudy-night") {
               $('.icon').html('<img src="../public/assets/images/icons/partly-cloudy-night.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://cdn.weatheravenue.com/img/background/background-night.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/partly-cloudy-night.png)");
             } else {
               console.log('Failed to load response.currently.icon');
             };
