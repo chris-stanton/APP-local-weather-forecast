@@ -68,10 +68,10 @@ $(document).ready(function() {
             // setting weather icons and background images to current weather conditions
             if (response.currently.icon === "clear-day") {
               $('.icon').html('<img src="../public/assets/images/icons/clear-day.png">');//
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://crevisio.com/images/posts/96/yjf9TgZEw/Crevisio-96-yjf9TgZEw.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/clear-day.png)");
             } else if (response.currently.icon === "clear-night") {
               $('.icon').html('<img src="../public/assets/images/icons/clear-night.png">');
-              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(http://clear-night.com/img/clear-night-placeholder.jpg)");
+              $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../public/assets/images/backgrounds/clear-night.png)");
             } else if (response.currently.icon === "rain") {
               $('.icon').html('<img src="../public/assets/images/icons/rain.png">');//
               $('body').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://static.pexels.com/photos/8486/water-rain-raindrops-drops.jpg)");
