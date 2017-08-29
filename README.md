@@ -4,7 +4,7 @@
 ---
 
 ## Description
-##### Weather app data for current location. Weather detail include hourly and daily details. All icons and backgrounds change to describe current weather conditions.  Application is mobile and desktop friendly.
+##### Weather app for current location weather data and 6 day outlook. Weather details include hourly and daily details. All icons and backgrounds change to describe current weather conditions.  Application is mobile and desktop friendly.
 
 #### Recognizable Weather Conditions
   1. Clear Day
