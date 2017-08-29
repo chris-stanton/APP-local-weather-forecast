@@ -15,12 +15,13 @@
 </head>
 
 <body>
-
+  <!-- LOADING shows when location in not present -->
   <section class="loader-container">
     <h1> Finding Your Location .... </h1>
     <div class="loader"> Loading .... </div>
   </section>
 
+  <!-- current location details nav bar -->
   <header class="location-container">
     <div class="icon">
       <img src="./"/>
@@ -31,123 +32,122 @@
       <p class="zipcode"> </p>
   </header>
 
+  <!-- main container -->
   <section class="container">
-
-
-
-        <section class="data-container">
-          <h4 class="currenttime"></h4>
-          <h5 class="temp"></h5>
-          <h5 class="humidity"></h5>
-          <h5 class="windspeed"></h5>
-            <p class="current-summary"></p>
-        </section>
-
-        <section class="chart">
-          <canvas id="hourlyChart" class="line-chart" width="100vw" height="25vh"></canvas>
-          <canvas id="dailyChart" class="line-chart" width="100vw" height="25vh"></canvas>
-        </section>
-
-        <section class="data-outlook">
-          <div class="outlook-0 outlook-container">
-            <h5 class="outlook-0-date"></h5>
-            <div class="outlook-0-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-0-temphigh"></h5>
-              <h5 class="outlook-0-templow"></h5>
-              <p class="outlook-0-sunrise"></p>
-              <p class="outlook-0-sunset"></p>
-              <p class="outlook-0-summary"><p>
-            </div>
-          </div>
-
-          <div class="outlook-1 outlook-container">
-            <h5 class="outlook-1-date"></h5>
-            <div class="outlook-1-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-1-temphigh"></h5>
-              <h5 class="outlook-1-templow"></h5>
-              <p class="outlook-1-sunrise"></p>
-              <p class="outlook-1-sunset"></p>
-              <p class="outlook-1-summary"><p>
-            </div>
-          </div>
-
-          <div class="outlook-2 outlook-container">
-            <h5 class="outlook-2-date"></h5>
-            <div class="outlook-2-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-2-temphigh"></h5>
-              <h5 class="outlook-2-templow"></h5>
-              <p class="outlook-2-sunrise"></p>
-              <p class="outlook-2-sunset"></p>
-              <p class="outlook-2-summary"><p>
-            </div>
-          </div>
-
-          <div class="outlook-3 outlook-container">
-            <h5 class="outlook-3-date"></h5>
-            <div class="outlook-3-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-3-temphigh"></h5>
-              <h5 class="outlook-3-templow"></h5>
-              <p class="outlook-3-sunrise"></p>
-              <p class="outlook-3-sunset"></p>
-              <p class="outlook-3-summary"><p>
-            </div>
-          </div>
-
-          <div class="outlook-4 outlook-container">
-            <h5 class="outlook-4-date"></h5>
-            <div class="outlook-4-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-4-temphigh"></h5>
-              <h5 class="outlook-4-templow"></h5>
-              <p class="outlook-4-sunrise"></p>
-              <p class="outlook-4-sunset"></p>
-              <p class="outlook-4-summary"><p>
-            </div>
-          </div>
-
-          <div class="outlook-5 outlook-container">
-            <h5 class="outlook-5-date"></h5>
-            <div class="outlook-5-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-5-temphigh"></h5>
-              <h5 class="outlook-5-templow"></h5>
-              <p class="outlook-5-sunrise"></p>
-              <p class="outlook-5-sunset"></p>
-              <p class="outlook-5-summary"><p>
-            </div>
-          </div>
-
-          <div class="outlook-6 outlook-container">
-            <h5 class="outlook-6-date"></h5>
-            <div class="outlook-6-icon">
-              <img class="outlook-icon" src="./"/>
-            </div>
-            <div class="outlook-data-container">
-              <h5 class="outlook-6-temphigh"></h5>
-              <h5 class="outlook-6-templow"></h5>
-              <p class="outlook-6-sunrise"></p>
-              <p class="outlook-6-sunset"></p>
-              <p class="outlook-6-summary"><p>
-            </div>
-          </div>
-        </section>
-
+    <!-- current data container -->
+    <section class="data-container">
+      <h4 class="currenttime"></h4>
+      <h5 class="temp"></h5>
+      <h5 class="humidity"></h5>
+      <h5 class="windspeed"></h5>
+        <p class="current-summary"></p>
+    </section>
+    <!-- chart container -->
+    <section class="chart">
+      <canvas id="hourlyChart" class="line-chart" width="100vw" height="25vh"></canvas>
+      <canvas id="dailyChart" class="line-chart" width="100vw" height="25vh"></canvas>
+    </section>
+    <!-- outlook data container -->
+    <section class="data-outlook">
+      <!-- outlook-0 container -->
+      <div class="outlook-0 outlook-container">
+        <h5 class="outlook-0-date"></h5>
+        <div class="outlook-0-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-0-temphigh"></h5>
+          <h5 class="outlook-0-templow"></h5>
+          <p class="outlook-0-sunrise"></p>
+          <p class="outlook-0-sunset"></p>
+          <p class="outlook-0-summary"><p>
+        </div>
+      </div>
+      <!-- outlook-1 container -->
+      <div class="outlook-1 outlook-container">
+        <h5 class="outlook-1-date"></h5>
+        <div class="outlook-1-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-1-temphigh"></h5>
+          <h5 class="outlook-1-templow"></h5>
+          <p class="outlook-1-sunrise"></p>
+          <p class="outlook-1-sunset"></p>
+          <p class="outlook-1-summary"><p>
+        </div>
+      </div>
+      <!-- outlook-2 container -->
+      <div class="outlook-2 outlook-container">
+        <h5 class="outlook-2-date"></h5>
+        <div class="outlook-2-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-2-temphigh"></h5>
+          <h5 class="outlook-2-templow"></h5>
+          <p class="outlook-2-sunrise"></p>
+          <p class="outlook-2-sunset"></p>
+          <p class="outlook-2-summary"><p>
+        </div>
+      </div>
+      <!-- outlook-3 container -->
+      <div class="outlook-3 outlook-container">
+        <h5 class="outlook-3-date"></h5>
+        <div class="outlook-3-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-3-temphigh"></h5>
+          <h5 class="outlook-3-templow"></h5>
+          <p class="outlook-3-sunrise"></p>
+          <p class="outlook-3-sunset"></p>
+          <p class="outlook-3-summary"><p>
+        </div>
+      </div>
+      <!-- outlook-4 container -->
+      <div class="outlook-4 outlook-container">
+        <h5 class="outlook-4-date"></h5>
+        <div class="outlook-4-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-4-temphigh"></h5>
+          <h5 class="outlook-4-templow"></h5>
+          <p class="outlook-4-sunrise"></p>
+          <p class="outlook-4-sunset"></p>
+          <p class="outlook-4-summary"><p>
+        </div>
+      </div>
+      <!-- outlook-5 container -->
+      <div class="outlook-5 outlook-container">
+        <h5 class="outlook-5-date"></h5>
+        <div class="outlook-5-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-5-temphigh"></h5>
+          <h5 class="outlook-5-templow"></h5>
+          <p class="outlook-5-sunrise"></p>
+          <p class="outlook-5-sunset"></p>
+          <p class="outlook-5-summary"><p>
+        </div>
+      </div>
+      <!-- outlook-6 container -->
+      <div class="outlook-6 outlook-container">
+        <h5 class="outlook-6-date"></h5>
+        <div class="outlook-6-icon">
+          <img class="outlook-icon" src="./"/>
+        </div>
+        <div class="outlook-data-container">
+          <h5 class="outlook-6-temphigh"></h5>
+          <h5 class="outlook-6-templow"></h5>
+          <p class="outlook-6-sunrise"></p>
+          <p class="outlook-6-sunset"></p>
+          <p class="outlook-6-summary"><p>
+        </div>
+      </div>
+    </section>
   </section>
   <footer>
     <div> Copyright (C) 2017 Chris Stanton. All Rights Reserved </div>
