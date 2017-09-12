@@ -269,7 +269,6 @@ $(document).ready(function() {
                       fontColor: '#ffffff',
                       padding: 30,
                       fontSize: 15,
-
                       boxWidth: 12
                     }
                   },
