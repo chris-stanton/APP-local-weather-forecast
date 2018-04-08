@@ -255,10 +255,10 @@ $(document).ready(function() {
                     bodyFontSize: 18,
                     callbacks: {
                       label: function(tooltipItem, data) {
-                        var label = 'Summary';
-                        var hourly_data = response.hourly.data[tooltipItem.index].summary;
-                        var label_temp = '°F';
-                        var hourly_highTemp = response.hourly.data[tooltipItem.index].temperature;
+                        let label = 'Summary';
+                        let hourly_data = response.hourly.data[tooltipItem.index].summary;
+                        let label_temp = '°F';
+                        let hourly_highTemp = response.hourly.data[tooltipItem.index].temperature;
                         return hourly_highTemp + label_temp + '   ' + label + ': ' + hourly_data;
                       }
                     }
