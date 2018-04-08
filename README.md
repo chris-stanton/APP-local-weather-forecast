@@ -1,5 +1,5 @@
 
-# Local Weather Forecast App
+# Local Weather Forecast Web App
 
 ---
 
@@ -41,21 +41,19 @@
 ---
 
 ## Technologies Used
-  1. HTML
-  2. CSS
-  3. Javascript
+  1. HTML5
+  2. CSS3 -> Flex Box
+  3. jQuery
   4. Dark Sky API
   5. Google geolocation API
-  6. jQuery
-  7. Font-awesome
-  8. ChartJS
-  9. Flex Box
+  6. Font-awesome
+  7. ChartJS
 
 ---  
 
 ## How To Install App
-  1. Download zip file
-  2. Open index.html file in browser
+  1. Download zip file or ``git clone`` repository
+  2. Open ``./public/index.html`` file in a browser
 
 ---
 
@@ -64,7 +62,7 @@
 ---
 
 ## License
-##### Copyright 2017 Chris Stanton
+##### Copyright 2018 Christopher J. Stanton
 
 ###### Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
