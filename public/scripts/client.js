@@ -3,8 +3,8 @@ $(document).ready(function() {
   console.log("client.js running...");
 
     // setting default values on init
-    var long = 0;
-    var lat = 0;
+    let long = 0;
+    let lat = 0;
 
     // hiding all elements and showing only loader
     $(".location-container").hide();
@@ -23,7 +23,7 @@ $(document).ready(function() {
       long = position.coords.longitude;
 
       // API query key to get address details bassed from lat/long
-      var google = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyDp0HzZ2Mydb4qQsMKpMgkIQPxN3x5-gdE";
+      let google = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyDp0HzZ2Mydb4qQsMKpMgkIQPxN3x5-gdE";
       $.ajax({
         type: "GET",
         url: google,
@@ -39,7 +39,7 @@ $(document).ready(function() {
       }); // end of ajax
 
       // API url query key for current weather details based off of lat and long
-      var dark_sky = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
+      let dark_sky = 'https://api.darksky.net/forecast/48429d15c51d64e8e6c03a84bec4e5b8/' + lat + ',' + long;
       $.ajax({
         type: "GET",
         url: dark_sky,
@@ -101,8 +101,8 @@ $(document).ready(function() {
             };
 
             // hourly chartJS
-            var ctx_hourly = document.getElementById("hourlyChart").getContext('2d');
-            var hourlyChart = new Chart(ctx_hourly, {
+            let ctx_hourly = document.getElementById("hourlyChart").getContext('2d');
+            let hourlyChart = new Chart(ctx_hourly, {
                 type: 'line',
                 data: {
                     labels: [
@@ -302,8 +302,8 @@ $(document).ready(function() {
 
 
             // daily chartJS
-            var ctx_daily = document.getElementById("dailyChart").getContext('2d');
-            var dailyChart = new Chart(ctx_daily, {
+            let ctx_daily = document.getElementById("dailyChart").getContext('2d');
+            let dailyChart = new Chart(ctx_daily, {
                 type: 'line',
                 data: {
                     labels: [
@@ -455,10 +455,10 @@ $(document).ready(function() {
                     bodyFontSize: 18,
                     callbacks: {
                       label: function(tooltipItem, data) {
-                        var summary_label = 'Summary';
-                        var summary_data = response.daily.data[tooltipItem.index].summary;
-                        var tempMax_label = "Temp High";
-                        var tempMax_data = response.daily.data[tooltipItem.index].temperatureMax;
+                        let summary_label = 'Summary';
+                        let summary_data = response.daily.data[tooltipItem.index].summary;
+                        let tempMax_label = "Temp High";
+                        let tempMax_data = response.daily.data[tooltipItem.index].temperatureMax;
                         return tempMax_label + ': ' + tempMax_data + '°F' + '   ' + summary_label + ': ' + summary_data;
                       }
                     }
@@ -728,33 +728,3 @@ $(document).ready(function() {
     }); // end get current position
   } // end geolocation
 }); // end document ready function
-
-
-
-
-
-
-
-//
-// {
-//   label: 'Daily High Temperature (°F)',
-//   hidden: true,
-//   data: [
-//     response.daily.data[0].temperatureMax,
-//     response.daily.data[1].temperatureMax,
-//     response.daily.data[2].temperatureMax,
-//     response.daily.data[3].temperatureMax,
-//     response.daily.data[4].temperatureMax,
-//     response.daily.data[5].temperatureMax,
-//     response.daily.data[6].temperatureMax,
-//     response.daily.data[7].temperatureMax
-//   ],
-//   backgroundColor: [
-//       '#ffffff'
-//   ],
-//   borderColor: [
-//       '#3204b5'
-//   ],
-//   borderWidth: 4,
-//   fill: false
-// }
